@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* @font-face { font-family: 'Outward-borders'; src: url('/assets/webfonts/outward-borders-webfont.eot'); src: url('/assets/webfonts/outward-borders-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/webfonts/outward-borders-webfont.woff2') format('woff2'), url('/assets/webfonts/outward-borders-webfont.woff') format('woff'), url('/assets/webfonts/outward-borders-webfont.ttf') format('truetype'), url('/assets/webfonts/outward-borders-webfont.svg#outwardborders') format('svg'); font-weight: bold; font-style: normal; } */
+/*  font-family: 'Oswald', sans-serif;
+font-family: 'Work Sans', sans-serif; */
+.ws-thin { font-family: Work Sans; font-weight: 100; }
+
+.ws-reg { font-family: Work Sans; font-weight: 300; }
+
+.ws-med { font-family: Work Sans; font-weight: 500; }
+
+.ws-bold { font-family: Work Sans; font-weight: 700; }
+
+.gos-footer { background-color: #093824; height: 280px; position: relative; bottom: 0px; }
+
+.gos-footer .gos-footer-container .gos-footer-inner .gos-footer-header { border-bottom: 2px solid #E6F47B; }
+
+.gos-footer .gos-footer-container .gos-footer-inner h2 { color: #E6F47B; font-size: 30px; }
+
+.gos-footer .gos-footer-container .gos-footer-inner a { text-decoration: none; color: #E6F47B; font-size: 20px; font-family: Oswald; font-weight: 200; }
+
+.gos-header { background-color: #E6F47B; height: 100px; width: 100vw; transition: all 0.3s; }
+
+.gos-header .gos-sidebar-link-logo h1 { color: #093824; font-family: work sans; font-size: 20px; font-weight: 600 !important; }
+
+@media (min-width: 768px) { .gos-header .gos-sidebar-link-logo h1 { font-size: 30px; } }
+
+.gos-header .gos-sidebar-button { position: relative; height: 100%; width: 100%; text-align: -webkit-right; }
+
+.gos-header .gos-sidebar-button .hamburger { height: 100%; width: 100%; left: 0; top: 0; }
+
+.gos-header .offcanvas-end { border-radius: 50px 0 0 20px; background-color: #E6F47B; width: 100vw; height: 70vh; }
+
+@media (min-width: 768px) { .gos-header .offcanvas-end { width: 80vw; height: 100vh; } }
+
+.gos-header .offcanvas-end .offcanvas-container .offcanvas-container-menu .offcanvas-header { border-bottom: 2px solid #093824; }
+
+.gos-header .offcanvas-end .offcanvas-container .offcanvas-container-menu .offcanvas-header h5 { font-family: Work sans; font-size: 20px; font-weight: 200; color: #093824; }
+
+@media (min-width: 768px) { .gos-header .offcanvas-end .offcanvas-container .offcanvas-container-menu .offcanvas-header h5 { font-size: 60px; } }
+
+.gos-header .offcanvas-end .offcanvas-container .offcanvas-container-info { border-right: 2px solid #093824; }
+
+.gos-header .offcanvas-end .menu-items a { font-size: 20px; font-weight: 200; font-family: Oswald; color: #093824; text-decoration: none; text-transform: uppercase; }
+
+@media (min-width: 768px) { .gos-header .offcanvas-end .menu-items a { font-size: 52px; } }
+
+@media (min-width: 992px) { .gos-header .offcanvas-end .menu-items a { font-size: 54px; } }
+
+.top-of-page { background-color: #6F9283; height: 100px; width: 100vw; }
+
+.blurred { webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+
+.icon-container { display: inline-block; cursor: pointer; }
+
+.bar1, .bar2, .bar3 { width: 35px; height: 5px; background-color: #ffffff; margin: 6px 0; transition: 0.4s; border-radius: 20px; }
+
+.change .bar1 { -webkit-transform: rotate(-45deg) translate(-9px, 6px); transform: rotate(-45deg) translate(-9px, 6px); }
+
+.change .bar2 { opacity: 0; }
+
+.change .bar3 { -webkit-transform: rotate(45deg) translate(-8px, -8px); transform: rotate(45deg) translate(-8px, -8px); }
+
+.gos-section-two-columns { background-position: center; background-size: cover; background-repeat: no-repeat; height: 100vh; /* border-bottom: 4px solid $tertiary; */ /* @include media-breakpoint-up(lg) { } */ }
+
+.gos-section-two-columns .gos-two-column-container { font-family: Oswald; }
+
+.gos-section-two-columns .gos-two-column-container .two-columns-img { background-size: contain; background-repeat: no-repeat; background-position: 0 50px; }
+
+.gos-section-two-columns .gos-two-column-container .two-columns-header .two-columns-header-inner h3 { color: #6F9283; /* -webkit-text-stroke: 1px $secondary; stroke-width: 2px; */ font-size: 46px; font-weight: 400; line-height: 1; border-bottom: 4px solid #6F9283; }
+
+.gos-section-two-columns .gos-two-column-container .two-columns-header .two-columns-header-inner p { color: #6F9283; font-family: work sans; }
+
+.gos-section-a .gos-section-accordion-container { background-color: #EAF6FF; }
+
+.gos-section-a .gos-section-accordion-container .gos-accordion-header h2 { font-size: 46px; font-weight: 400; color: #6F9283; line-height: 1; font-family: Oswald; border-bottom: 4px solid #6F9283; }
+
+#map { top: 0; bottom: 0; height: 90vh; }
+
+svg { position: absolute; width: 100%; height: 100%; }
+
+circle { stroke-width: 2; cursor: pointer; transition: 0.5s fill, 0.5s stroke-width; }
+
+circle:hover { fill: #5e5ee5; stroke-width: 18; }
+
+.gos-general-infotab { display: fixed; background-color: transparent; width: 100vw; height: 10%; position: absolute; top: 0; left: 0; border: 2px solid #093824; webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); background-color: rgba(255, 255, 255, 0.5); border-radius: 5px; }
+
+@media (min-width: 992px) { .gos-general-infotab { display: fixed; background-color: transparent; width: 40vw; height: 60%; position: absolute; top: 0; left: 0; border-bottom: 2px solid #093824; } }
+
+.gos-general-infotab .gos-general-infotab-container .info-inner { font-size: 15px; font-family: Oswald; font-weight: 300; border-bottom: 2px solid black; }
+
+.gos-general-infotab .gos-general-infotab-container .info-inner h2 { font-family: Oswald; font-weight: 400; }
+
+.gos-general-infotab .gos-general-infotab-container .info-inner .info { font-family: work sans; font-size: 25px; }
+
+#defaultCanvas0 { overflow: hidden; }
+
+.overlay { background-image: url("https://64.media.tumblr.com/96bfcda9ab211b730d680a052d19f83d/tumblr_o7w2veChcr1runoqyo4_540.gifv"); height: 100%; width: 100%; opacity: 0.15; background-repeat: no-repeat; background-size: cover; position: absolute; }
+
+svg { position: absolute; width: 100%; height: 100%; }
+
+circle { stroke-width: 2; cursor: pointer; transition: 0.5s fill, 0.5s stroke-width; }
+
+circle:hover { fill: #5e5ee5; stroke-width: 18; }
+
+.gos-general-infotab-g { display: fixed; background-color: transparent; width: 100vw; height: 50%; position: absolute; top: 0; left: 0; /* ebkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);  background-color: rgba(255, 255, 255, .1); */ }
+
+@media (min-width: 992px) { .gos-general-infotab-g { display: fixed; background-color: transparent; width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; /*     border-bottom: 2px solid $primary; */ } }
+
+.gos-general-infotab-g .gos-general-infotab-container { font-family: Work sans; font-weight: 300; font-size: 20px; color: aliceblue; /* text-shadow: 1px 3px black; mix-blend-mode: overlay; */ }
+
+.gos-general-infotab-g .gos-general-infotab-container .SoilHumidityLabel { top: 20px; line-height: 0.8; font-weight: 100; left: 20px; }
+
+.gos-general-infotab-g .gos-general-infotab-container .HumidityLabel { top: 30vh; line-height: 0.8; font-weight: 100; left: 20px; }
+
+.gos-general-infotab-g .gos-general-infotab-container .gos-StationName { position: absolute; top: 20px; line-height: 0.9; font-weight: 100; text-align: right; right: 20px; }
+
+.gos-general-infotab-g .gos-general-infotab-container .PPMlabel { position: absolute; bottom: 20px; line-height: 0.9; font-weight: 100; left: 20px; }
+
+.gos-general-infotab-g .gos-general-infotab-container .LightLabel { position: absolute; bottom: 20px; line-height: 0.8; font-weight: 100; right: 20px; }
+
+.gos-general-infotab-g .gos-general-infotab-container .info-inner { padding: 20px; border: 2px solid white; border-radius: 10px; }
+
+.gos-general-infotab-g .gos-general-infotab-container .info-inner .value { font-size: 140px; line-height: 0.9; font-family: Oswald; font-weight: 100; }
+
+.gos-general-infotab-g .gos-general-infotab-container .info-inner .udm { font-size: 80px; }
+
+.gos-general-infotab-g .gos-general-infotab-container .info-inner h2 { font-size: 20px; }
+
+body { margin: 0; padding: 0; overflow: hidden; /* position: relative; top:$grid-gutter-width*5; */ }
+
+/*# sourceMappingURL=main.css.map */
