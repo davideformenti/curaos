@@ -1,104 +1,7 @@
-/* const map = new L.Map("map", {center: [45.5, 9.5], zoom: 10})
-.addLayer(new L.TileLayer("https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}", {
-subdomains: 'abcd',
-minZoom: 0,
-maxZoom: 20,
-ext: 'png'}));
-
-const svg = d3.select(map.getPanes().overlayPane).append("svg"),
-g = svg.append("g").attr("class", "leaflet-zoom-hide");
-
-// const stations_svg = d3.select(map.getPanes().overlayPane).append("svg"),
-p = svg.append("g").attr("class", "circles"); 
 
 
 
-
-Promise.all([
-d3.json("/assets/data/geoJSON/municipiMilano.geojson"),
-d3.json("/assets/data/geoJSON/stazionirilievoinquinanti.geojson"),
-]).then(function(files) {
-var municipi = files[0]
-var stazioni = files[1]
-Municipi(municipi);
-Stazioni(stazioni);
-// files[0] will contain file1.csv
-// files[1] will contain file2.csv
-}).catch(function(err) {
-console.log(err);
-})
-
-function Municipi(municipi) {
-
-var transform = d3.geoTransform({point: projectPoint}),
-path = d3.geoPath().projection(transform);
-
-var feature = g.selectAll("path")
-.data(municipi.features)
-.enter().append("path");
-
-map.on("zoomend", reset);
-reset();
-
-// Reposition the SVG to cover the features.
-function reset() {
-var bounds = path.bounds(municipi),
-topLeft = bounds[0],
-bottomRight = bounds[1];
-
-svg .attr("width", bottomRight[0] - topLeft[0])
-.attr("height", bottomRight[1] - topLeft[1])
-.style("left", topLeft[0] + "px")
-.style("top", topLeft[1] + "px");
-
-g   .attr("transform", "translate(" + -topLeft[0] + "," + -topLeft[1] + ")");
-
-feature.attr("d", path)
-.attr('stroke', 'white')
-.attr('opacity', '50%');
-}
-
-// Use Leaflet to implement a D3 geometric transformation.
-function projectPoint(x, y) {
-var point = map.latLngToLayerPoint(new L.LatLng(y, x));
-this.stream.point(point.x, point.y);
-}
-
-};
-
-function Stazioni(stazioni) {
-
-var transform = d3.geoTransform({point: projectPoint}),
-path = d3.geoPath().projection(transform);
-var projection = d3.geoMercator()
-
-var feature = p.selectAll("circles")
-.data(stazioni.features)
-.enter().append("circle")
-/* .attr('cx', d => map.latLngToLayerPoint(d.geometry.coordinates).x)
-.attr("cy", d => map.latLngToLayerPoint(d.geometry.coordinates).y) */
-/* .attr('cx', d => map.latLngToLayerPoint(d.geometry.coordinates).x)
-.attr("cy", d => map.latLngToLayerPoint(d.geometry.coordinates).y)
-.attr('stroke', 'white')
-.attr('fill', 'red')
-.attr('r', 20);
-console.log(feature.attr("cy"))
-console.log(feature.attr("cx"))
-
-
-
-function projectPoint(x, y) {
-var point = map.latLngToLayerPoint(new L.LatLng(y, x));
-this.stream.point(point.x, point.y);
-}
-
-};
-
-
- */
-
-
-
+var paolo = '#627BC1'
 
         //////////////////
         // Mapbox stuff
@@ -131,7 +34,7 @@ map.addLayer({
 'source': 'states',
 'layout': {},
 'paint': {
-'fill-color': '#627BC1',
+'fill-color': paolo,
 'fill-opacity': [
 'case',
 ['boolean', ['feature-state', 'hover'], false],

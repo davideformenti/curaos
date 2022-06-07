@@ -74,7 +74,7 @@ font-family: 'Work Sans', sans-serif; */
 
 .gos-section-a .gos-section-accordion-container .gos-accordion-header h2 { font-size: 46px; font-weight: 400; color: #6F9283; line-height: 1; font-family: Oswald; border-bottom: 4px solid #6F9283; }
 
-#map { top: 0; bottom: 0; height: 90vh; }
+#map { top: 0; bottom: 0; height: 100vh; }
 
 svg { position: absolute; width: 100%; height: 100%; }
 
@@ -102,7 +102,7 @@ circle { stroke-width: 2; cursor: pointer; transition: 0.5s fill, 0.5s stroke-wi
 
 circle:hover { fill: #5e5ee5; stroke-width: 18; }
 
-.gos-general-infotab-g { display: fixed; background-color: transparent; width: 100vw; height: 50%; position: absolute; top: 0; left: 0; /* ebkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);  background-color: rgba(255, 255, 255, .1); */ }
+.gos-general-infotab-g { display: fixed; background-color: transparent; width: 100vw; height: 50%; position: absolute; top: 0; left: 0; }
 
 @media (min-width: 992px) { .gos-general-infotab-g { display: fixed; background-color: transparent; width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; /*     border-bottom: 2px solid $primary; */ } }
 
@@ -112,13 +112,13 @@ circle:hover { fill: #5e5ee5; stroke-width: 18; }
 
 .gos-general-infotab-g .gos-general-infotab-container .HumidityLabel { top: 30vh; line-height: 0.8; font-weight: 100; left: 20px; }
 
-.gos-general-infotab-g .gos-general-infotab-container .gos-StationName { position: absolute; top: 20px; line-height: 0.9; font-weight: 100; text-align: right; right: 20px; }
+.gos-general-infotab-g .gos-general-infotab-container .gos-StationName { position: absolute; bottom: 240px; line-height: 0.9; font-weight: 100; text-align: right; right: 20px; }
 
 .gos-general-infotab-g .gos-general-infotab-container .PPMlabel { position: absolute; bottom: 20px; line-height: 0.9; font-weight: 100; left: 20px; }
 
 .gos-general-infotab-g .gos-general-infotab-container .LightLabel { position: absolute; bottom: 20px; line-height: 0.8; font-weight: 100; right: 20px; }
 
-.gos-general-infotab-g .gos-general-infotab-container .info-inner { padding: 20px; border: 2px solid white; border-radius: 10px; }
+.gos-general-infotab-g .gos-general-infotab-container .info-inner { padding: 20px; border: 2px solid white; border-radius: 10px; webkit-backdrop-filter: blur(10px); backdrop-filter: blur(20px); background-color: rgba(255, 255, 255, 0.1); }
 
 .gos-general-infotab-g .gos-general-infotab-container .info-inner .value { font-size: 140px; line-height: 0.9; font-family: Oswald; font-weight: 100; }
 
