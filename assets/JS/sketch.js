@@ -47,7 +47,12 @@ var flowfield=[];
 let spectral;
 let labeltitolo;
 let t;
-
+let ppm_url = 'https://io.adafruit.com/api/v2/davideformenti/feeds/sentinella.ppm';
+let esposizione_url = 'https://io.adafruit.com/api/v2/davideformenti/feeds/sentinella.exposure';
+let SoilHumidity_url = 'https://io.adafruit.com/api/v2/davideformenti/feeds/sentinella.soil-humidity';
+let ExtHumidity_url = 'https://io.adafruit.com/api/v2/davideformenti/feeds/sentinella.ext-humidity';
+let Temp_url = 'https://io.adafruit.com/api/v2/davideformenti/feeds/sentinella.temperature';
+let counter = 0;
 
 
 function setup() {
@@ -172,12 +177,73 @@ function draw() {
 }
 
 
+function getPPMData() {
+  //let data;  // local var to get last value
+  // this calls a GET function, which requests a URL
+  // the arguments are the url to request, the kind of data to expect,
+  // and a callback function once the data is ready
+  httpGet(ppm_url, 'json', function(response) {
+    console.log(response);
+    PPM = floor(response.last_value); // store the data we're interested in
+    // draw an ellipse
+    console.log(PPM);
+  });
+}
 
+function getExposureData() {
+  //let data;  // local var to get last value
+  // this calls a GET function, which requests a URL
+  // the arguments are the url to request, the kind of data to expect,
+  // and a callback function once the data is ready
+  httpGet(esposizione_url, 'json', function(response) {
+    console.log(response);
+    esposizione = floor(response.last_value); // store the data we're interested in
+    // draw an ellipse
+    console.log(esposizione);
+  });
+}
+
+function getTempData() {
+  //let data;  // local var to get last value
+  // this calls a GET function, which requests a URL
+  // the arguments are the url to request, the kind of data to expect,
+  // and a callback function once the data is ready
+  httpGet(Temp_url, 'json', function(response) {
+    console.log(response);
+    valLM35 = floor(response.last_value); // store the data we're interested in
+    // draw an ellipse
+    console.log(valLM35);
+  });
+}
+function getExtHumData() {
+  //let data;  // local var to get last value
+  // this calls a GET function, which requests a URL
+  // the arguments are the url to request, the kind of data to expect,
+  // and a callback function once the data is ready
+  httpGet(ExtHumidity_url, 'json', function(response) {
+    console.log(response);
+    ExtMoisture = floor(response.last_value); // store the data we're interested in
+    // draw an ellipse
+    console.log(ExtMoisture);
+  });
+}
+function getSoilHumData() {
+  //let data;  // local var to get last value
+  // this calls a GET function, which requests a URL
+  // the arguments are the url to request, the kind of data to expect,
+  // and a callback function once the data is ready
+  httpGet(SoilHumidity_url, 'json', function(response) {
+    console.log(response);
+    SoilHumidity = floor(response.last_value); // store the data we're interested in
+    // draw an ellipse
+    console.log(SoilHumidity);
+  });
+}
 
 
 function serialEvent(){
 
-	//receive serial data here
+/* 	//receive serial data here
 	var inputString = serial.readStringUntil('\n');
   if (!inputString) return;
   // split the string into an array:
@@ -202,7 +268,7 @@ function serialEvent(){
     console.log(rzero);
     console.log("Gas Sensor Value");
     console.log(GasSensorValue);
-	}
+	} */
 }
 
 function serverConnected() {
@@ -307,8 +373,19 @@ function setGradient(x, y, w, h, c1, c2, axis) {
 
 
 
+
 function water_monitor(){
 
+    // only pull this every once in awhile
+    if (counter % 180 == 0) {
+      getExposureData();
+      getPPMData(); // function for calling data
+      getTempData();
+      getSoilHumData();
+      getExtHumData();
+
+    }
+    counter++;
 /*   water_pg.colorMode(HSL,360, 100, 100,1)
   var background_lightness = esposizione;
   var background_color = map(background_lightness,0,100,220,45);
@@ -369,7 +446,7 @@ function blob(size, xCenter, yCenter, k, t, noisiness) {
     let x = xCenter + r * cos(theta);
     let y = yCenter + r * sin(theta);
     water_pg.curveVertex(x, y);
-    water_pg.strokeWeight(.4);
+    water_pg.strokeWeight(1);
 
 
     
