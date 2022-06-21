@@ -1,7 +1,50 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* @font-face { font-family: 'Outward-borders'; src: url('/assets/webfonts/outward-borders-webfont.eot'); src: url('/assets/webfonts/outward-borders-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/webfonts/outward-borders-webfont.woff2') format('woff2'), url('/assets/webfonts/outward-borders-webfont.woff') format('woff'), url('/assets/webfonts/outward-borders-webfont.ttf') format('truetype'), url('/assets/webfonts/outward-borders-webfont.svg#outwardborders') format('svg'); font-weight: bold; font-style: normal; } */
 /*  font-family: 'Oswald', sans-serif;
 font-family: 'Work Sans', sans-serif; */
+/**
+ * @license
+ *
+ * Font Family: Chillax
+ * Designed by: Manushi Parikh
+ * URL: https://www.fontshare.com/fonts/chillax
+ * © 2022 Indian Type Foundry
+ *
+ * Font Styles:
+ * Chillax Variable(Variable font)
+ * Chillax Extralight
+ * Chillax Light
+ * Chillax Regular
+ * Chillax Medium
+ * Chillax Semibold
+ * Chillax Bold
+ *
+*/
+/**
+* This is a variable font
+* You can controll variable axes as shown below:
+* font-variation-settings: 'wght' 700.0;
+*
+* available axes:
+
+* 'wght' (range from 200.0 to 700.0)
+
+*/
+@font-face { font-family: 'Chillax-Variable'; src: url("../fonts/chillax/Chillax-Variable.woff2") format("woff2"), url("../fonts/chillax/Chillax-Variable.woff") format("woff"), url("../fonts/chillax/Chillax-Variable.ttf") format("truetype"); font-weight: 200 700; font-display: swap; font-style: normal; }
+
+@font-face { font-family: 'Chillax-Extralight'; src: url("../fonts/chillax/Chillax-Extralight.woff2") format("woff2"), url("../fonts/chillax/Chillax-Extralight.woff") format("woff"), url("../fonts/chillax/Chillax-Extralight.ttf") format("truetype"); font-weight: 200; font-display: swap; font-style: normal; }
+
+@font-face { font-family: 'Chillax-Light'; src: url("../fonts/chillax/Chillax-Light.woff2") format("woff2"), url("../fonts/chillax/Chillax-Light.woff") format("woff"), url("../fonts/chillax/Chillax-Light.ttf") format("truetype"); font-weight: 300; font-display: swap; font-style: normal; }
+
+@font-face { font-family: 'Chillax-Regular'; src: url("../fonts/chillax/Chillax-Regular.woff2") format("woff2"), url("../fonts/chillax/Chillax-Regular.woff") format("woff"), url("../fonts/chillax/Chillax-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; font-style: normal; }
+
+@font-face { font-family: 'Chillax-Medium'; src: url("../fonts/chillax/Chillax-Medium.woff2") format("woff2"), url("../fonts/chillax/Chillax-Medium.woff") format("woff"), url("../fonts/chillax/Chillax-Medium.ttf") format("truetype"); font-weight: 500; font-display: swap; font-style: normal; }
+
+@font-face { font-family: 'Chillax-Semibold'; src: url("../fonts/chillax/Chillax-Semibold.woff2") format("woff2"), url("../fonts/chillax/Chillax-Semibold.woff") format("woff"), url("../fonts/chillax/Chillax-Semibold.ttf") format("truetype"); font-weight: 600; font-display: swap; font-style: normal; }
+
+@font-face { font-family: 'Chillax-Bold'; src: url("../fonts/chillax/Chillax-Bold.woff2") format("woff2"), url("../fonts/chillax/Chillax-Bold.woff") format("woff"), url("../fonts/chillax/Chillax-Bold.ttf") format("truetype"); font-weight: 700; font-display: swap; font-style: normal; }
+
 .ws-thin { font-family: Work Sans; font-weight: 100; }
 
 .ws-reg { font-family: Work Sans; font-weight: 300; }
@@ -102,29 +145,49 @@ circle { stroke-width: 2; cursor: pointer; transition: 0.5s fill, 0.5s stroke-wi
 
 circle:hover { fill: #5e5ee5; stroke-width: 18; }
 
-.gos-general-infotab-g { display: fixed; background-color: transparent; width: 100vw; height: 50%; position: absolute; top: 0; left: 0; }
+.gos-general-infotab-g { display: fixed; background-color: transparent; width: 100vw; height: 100%; position: absolute; top: 0; left: 0; }
 
 @media (min-width: 992px) { .gos-general-infotab-g { display: fixed; background-color: transparent; width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; /*     border-bottom: 2px solid $primary; */ } }
 
-.gos-general-infotab-g .gos-general-infotab-container { font-family: Work sans; font-weight: 300; font-size: 20px; color: aliceblue; /* text-shadow: 1px 3px black; mix-blend-mode: overlay; */ }
+.gos-general-infotab-g .gos-general-infotab-container { height: 100%; color: aliceblue; /* text-shadow: 1px 3px black; mix-blend-mode: overlay; */ }
 
-.gos-general-infotab-g .gos-general-infotab-container .SoilHumidityLabel { top: 20px; line-height: 0.8; font-weight: 100; left: 20px; }
+.gos-general-infotab-g .gos-general-infotab-container .gos-StationName { line-height: 1.2; }
 
-.gos-general-infotab-g .gos-general-infotab-container .HumidityLabel { top: 30vh; line-height: 0.8; font-weight: 100; left: 20px; }
+.gos-general-infotab-g .gos-general-infotab-container .gos-StationName .date { font-size: 20px; font-family: Chillax-Variable; font-weight: 300; }
 
-.gos-general-infotab-g .gos-general-infotab-container .gos-StationName { position: absolute; bottom: 240px; line-height: 0.9; font-weight: 100; text-align: right; right: 20px; }
+@media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .gos-StationName .date { font-size: 40px; } }
 
-.gos-general-infotab-g .gos-general-infotab-container .PPMlabel { position: absolute; bottom: 20px; line-height: 0.9; font-weight: 100; left: 20px; }
+.gos-general-infotab-g .gos-general-infotab-container .gos-StationName h2 { font-size: 72px; font-family: Chillax-Variable; font-weight: 400; text-align: right; line-height: .75; }
+
+@media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .gos-StationName h2 { font-size: 80px; } }
+
+.gos-general-infotab-g .gos-general-infotab-container .gos-StationName p { font-family: Oswald; font-weight: 100; font-size: 60px; }
+
+@media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .gos-StationName p { font-size: 70px; } }
+
+.gos-general-infotab-g .gos-general-infotab-container .PPMlabel { width: 45vw; padding: 20px; position: absolute; top: 30vh; line-height: 0.9; font-weight: 100; left: 20px; }
+
+@media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .PPMlabel { top: auto; bottom: 10vh; width: auto; } }
+
+.gos-general-infotab-g .gos-general-infotab-container .apportoIdrico .SoilHumidityLabel { bottom: 40px; line-height: 0.8; font-weight: 100; left: 20px; }
+
+.gos-general-infotab-g .gos-general-infotab-container .apportoIdrico .HumidityLabel { top: 30vh; line-height: 0.8; font-weight: 100; left: 20px; }
 
 .gos-general-infotab-g .gos-general-infotab-container .LightLabel { position: absolute; bottom: 20px; line-height: 0.8; font-weight: 100; right: 20px; }
 
-.gos-general-infotab-g .gos-general-infotab-container .info-inner { padding: 20px; border: 2px solid white; border-radius: 10px; webkit-backdrop-filter: blur(10px); backdrop-filter: blur(20px); background-color: rgba(255, 255, 255, 0.1); }
+.gos-general-infotab-g .gos-general-infotab-container .info-inner { border: 2px solid white; webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); background-color: rgba(255, 255, 255, 0.05); border-radius: 10px; }
 
-.gos-general-infotab-g .gos-general-infotab-container .info-inner .value { font-size: 140px; line-height: 0.9; font-family: Oswald; font-weight: 100; }
+.gos-general-infotab-g .gos-general-infotab-container .info-inner .label { font-size: 20px; font-family: Chillax-variable; font-weight: 200; }
 
-.gos-general-infotab-g .gos-general-infotab-container .info-inner .udm { font-size: 80px; }
+.gos-general-infotab-g .gos-general-infotab-container .info-inner .value { font-size: 60px; line-height: 0.9; font-family: Oswald; font-weight: 100; }
 
-.gos-general-infotab-g .gos-general-infotab-container .info-inner h2 { font-size: 20px; }
+@media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .info-inner .value { font-size: 140px; } }
+
+.gos-general-infotab-g .gos-general-infotab-container .info-inner .udm { font-size: 25px; }
+
+@media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .info-inner .udm { font-size: 60px; } }
+
+.gos-general-infotab-g .gos-general-infotab-container .info-inner .info-heading { font-size: 40px; }
 
 body { margin: 0; padding: 0; overflow: hidden; /* position: relative; top:$grid-gutter-width*5; */ }
 

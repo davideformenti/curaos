@@ -26,8 +26,8 @@ let step;
 let n = 40; // number of blobs
 let radius = 1; // diameter of the circle
 let inter = 1; // difference between the sizes of two blobs
-let maxNoise = 1550;
-let lapse = 10;    // timer
+let maxNoise = 1400;
+let lapse = 0;    // timer
 let noiseProg = (x) => (x);
 
 
@@ -411,14 +411,20 @@ function water_monitor(){
 
 /* var soilMoistureValue = SoilHumidity;
 var soilmoisturepercent = Math.floor(map(SoilHumidity, AirValue, WaterValue,0,100)); */
-
+let noisiness;
 let t = frameCount/100;
 for (let i = n; i > 0; i--) {
   let alpha = 1 - noiseProg(i / n);
   water_pg.fill(PPM/3.5, 60, 60, alpha); 
   let size = radius + i * inter;
   let k = kMax * sqrt(i/n);
-  let noisiness = maxNoise * noiseProg(i / n);
+  if (windowWidth<windowHeight){
+    maxNoise=700;
+  }
+  else{
+
+  }
+  noisiness = maxNoise * noiseProg(i / n);
   water_pg.stroke(SoilHumidity*2,100,SoilHumidity/2);
   blob(size, water_pg.width*1.3, water_pg.height/2, k, t - i * step, noisiness);
   blob(size, -water_pg.width/3, water_pg.height/4, k, t - i * step, noisiness);

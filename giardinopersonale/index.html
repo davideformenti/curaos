@@ -26,22 +26,21 @@
 
 
   <div id="gos-info-tab" class="gos-general-infotab-g gos-tab">
-        <div id="tooltip" class="gos-general-infotab-container p-3">
+        <div id="tooltip" class="gos-general-infotab-container">
            
-          <div class="info-inner gos-StationName">           
+          <div class="py-3 gos-StationName">           
           
-            <div class="">
-              <span id="date-time" class="info"> </span><br>
-              <span id="Temperatura" class="info"> </span><span>C°</span>
-              <h2 class="m-0">BAUSAN</h2>
+            <div class="d-flex px-3 flex-column align-items-end col-12">
+              <span id="date-time" class="date"> </span>
+              <h2 class="m-0">P.zza Bausan</h2>
+              <p class=""><span id="Temperatura"> </span><span> C°</span></p>
             </div>
           </div>
                   
           
-          <h2 class="p-2">APPORTO IDRICO:</h2>
-          <div class="apportoIdrico d-flex">
-
-          <div class="info-inner mx-4 SoilHumidityLabel d-flex flex-column-reverse">
+          <div class="apportoIdrico info-inner my-2 d-none">
+            <h2 class="p-2">APPORTO IDRICO:</h2>
+          <div class="mx-4 SoilHumidityLabel d-flex flex-column-reverse">
             <div class="label">
               <h2 class="p-2">UMIDITà TERRENO:</h2>
             </div>
@@ -49,7 +48,7 @@
               <span id="ApportoIdrico" class="info"></span><span class="udm">%</span>
             </div>
           </div>
-          <div class="info-inner mx-4 HumidityLabel d-flex flex-column-reverse">
+          <div class="mx-4 HumidityLabel d-flex flex-column-reverse">
             <div class="label align-self-end">
               <h2 class="p-2">UMIDITA AMBIENTALE</h2>
             </div>
@@ -62,12 +61,13 @@
 
           <div class="info-inner PPMlabel">
             <div class="label">
-              <h2>QUALITA DELL'ARIA:</h2>
+              <h2 class=" text-end text-lg-start">QUALITA <br>DELL'ARIA</h2>
             </div>
-            <div class=" value">
+            <div class="value d-flex justify-content-end justify-content-lg-start">
               <span id="PPM" class="info"></span>
-            </div>
-            <span class="udm">PPM CO2</span>
+            
+            <span class="udm align-self-center">PPM <br>CO2</span>
+          </div>
           </div>
           
           <div class="info-inner LightLabel">
@@ -85,10 +85,11 @@
     
     </div> 
     
- 
+<!--  
 <div class="overlay">
 
 </div>
+ -->
 
 
 
