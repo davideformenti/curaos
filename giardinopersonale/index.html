@@ -26,8 +26,7 @@
 
 
   <div id="gos-info-tab" class="gos-general-infotab-g gos-tab">
-        <div id="tooltip" class="gos-general-infotab-container">
-           
+        <div id="tooltip" class="gos-general-infotab-container d-flex flex-column align-items-center align-content-lg-between flex-wrap-reverse justify-content-lg-end">
           <div class="py-3 gos-StationName">           
           
             <div class="d-flex px-3 flex-column align-items-end col-12">
@@ -36,41 +35,71 @@
               <p class=""><span id="Temperatura"> </span><span> C°</span></p>
             </div>
           </div>
-                  
-          
-          <div class="apportoIdrico info-inner my-2 d-none">
-            <h2 class="p-2">APPORTO IDRICO:</h2>
-          <div class="mx-4 SoilHumidityLabel d-flex flex-column-reverse">
-            <div class="label">
-              <h2 class="p-2">UMIDITà TERRENO:</h2>
-            </div>
-            <div class="value">
-              <span id="ApportoIdrico" class="info"></span><span class="udm">%</span>
-            </div>
+
+          <div class="helper">
+            ?
           </div>
-          <div class="mx-4 HumidityLabel d-flex flex-column-reverse">
-            <div class="label align-self-end">
-              <h2 class="p-2">UMIDITA AMBIENTALE</h2>
-            </div>
-            <div class="value">
-              <span id="ExternalHumidity" class="info"></span><span class="udm">%</span>
-            </div>
-          </div>
-        </div>
 
 
-          <div class="info-inner PPMlabel">
-            <div class="label">
-              <h2 class=" text-end text-lg-start">QUALITA <br>DELL'ARIA</h2>
-            </div>
-            <div class="value d-flex justify-content-end justify-content-lg-start">
-              <span id="PPM" class="info"></span>
+
+
+
+
+
+
+
+          <div class="content mx-4 d-flex flex-column justify-content-start align-items-center">
             
-            <span class="udm align-self-center">PPM <br>CO2</span>
-          </div>
+
+
+          <div class="info-inner col-10 col-lg-3 PPMlabel d-flex align-self-lg-start justify-content-between">
+            <img class="w-25" src="/curaos/assets/img/icons/air-icon.png">
+            <div class="label">
+              <h2 class=" text-end text-lg-start">QUALITA DELL'ARIA</h2>
+              <div class="value d-flex justify-content-between justify-content-lg-start">
+                <span id="PPM" class="info"></span>
+              
+              <span class="udm align-self-end"> PPM <br> CO2</span>
+            </div>
+            </div>
+          </div>                  
+          
+          <div class="apportoIdrico col-10 col-lg-4 info-inner my-2">
+            <div class="col-12 d-flex justify-content-between">
+              <img class="w-25" src="/curaos/assets/img/icons/water-icon.png">
+              <div class="hydro-label-heading d-flex flex-column">
+                <h2 class="">APPORTO IDRICO</h2>
+                <h4 class="">Ultimo rifornimento: 20/6/2022</h4>
+            </div>
+            </div>
+            <div class="apportoIdrico-inner d-flex justify-content-between">
+
+              <div class="SoilHumidityLabel p-2 d-flex col-5 flex-column-reverse">
+                <div class="label">
+                  <h2 class="">Umidità terreno</h2>
+                <div class="value">
+                  <span id="ApportoIdrico" class="info"></span><span class="udm">%</span>
+                </div>
+              </div>
+              </div>
+
+
+              <div class="HumidityLabel p-2 d-flex col-6 flex-column-reverse">
+                <div class="label align-self-end">
+                  <h2 class="">Umidità ambientale</h2>
+                <div class="value">
+                  <span id="ExternalHumidity" class="info"></span><span class="udm">%</span>
+                </div>
+              </div>
+              </div>
+
+
+            </div>
           </div>
           
-          <div class="info-inner LightLabel">
+          <div class="info-inner p-4 col-10 col-lg-4 LightLabel">
+            <img class="w-25" src="/curaos/assets/img/icons/light-icon.png">
+
             <div class="label">
               <h2>ESPOSIZIONE:</h2>
             </div>
@@ -80,8 +109,18 @@
           </div>
 
 
-          
+        </div>
+
+
+        <div class="switch-view">
+          PASSA AL PARCO URBANO
+        </div>
+
+
       </div>
+
+
+      
     
     </div> 
     

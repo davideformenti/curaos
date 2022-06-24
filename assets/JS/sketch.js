@@ -419,16 +419,25 @@ for (let i = n; i > 0; i--) {
   let size = radius + i * inter;
   let k = kMax * sqrt(i/n);
   if (windowWidth<windowHeight){
-    maxNoise=700;
+    maxNoise=800;
+    n = 20; // number of blobs
+    radius = 2; // diameter of the circle
+    inter = 2; // difference between the sizes of two blobs
   }
   else{
 
   }
   noisiness = maxNoise * noiseProg(i / n);
   water_pg.stroke(SoilHumidity*2,100,SoilHumidity/2);
-  blob(size, water_pg.width*1.3, water_pg.height/2, k, t - i * step, noisiness);
-  blob(size, -water_pg.width/3, water_pg.height/4, k, t - i * step, noisiness);
-  
+  if (windowWidth<windowHeight){ //mobile
+  blob(size, water_pg.width/2, water_pg.height, k, t - i * step, noisiness);
+  blob(size, water_pg.width/2, -water_pg.width/4, k, t - i * step, noisiness);
+  }
+  else{
+    blob(size, water_pg.width*1.3, water_pg.height/2, k, t - i * step, noisiness);
+    blob(size, -water_pg.width/3, water_pg.height/4, k, t - i * step, noisiness);
+  }
+
 }
 
 /*water_pg.textSize(20);
