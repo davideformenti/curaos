@@ -175,7 +175,7 @@ circle:hover { fill: #5e5ee5; stroke-width: 18; }
 
 .gos-general-infotab-g .gos-general-infotab-container .LightLabel { display: flex; flex-direction: row; align-content: center; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; }
 
-.gos-general-infotab-g .gos-general-infotab-container .content { border: 2px solid white; webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); background-color: rgba(225, 225, 225, 0.2); border-radius: 10px; }
+.gos-general-infotab-g .gos-general-infotab-container .content { webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); background-color: rgba(225, 225, 225, 0.2); border-radius: 10px; }
 
 .gos-general-infotab-g .gos-general-infotab-container .content .info-inner { /* border:2px solid white; webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);  background-color: rgba(125, 125, 125, .2); border-radius: 10px; */ }
 
