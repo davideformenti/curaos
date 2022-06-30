@@ -12,8 +12,207 @@
 <script src='https://cdn.jsdelivr.net/npm/mapbox-gl/dist/mapbox-gl.min.js'></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="../assets/JS/queue.v1.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>
+
 
   </head>
+<h2 class="cos-hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Esplora</h2>
+
+<div class="offcanvas cos-sidebar offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header cos-sidebar-header d-none">
+  </div>
+  <div class="offcanvas-body cos-sidebar-body">
+
+
+
+    <div class="accordion accordion-flush cos-sidebar-accordion-container" id="accordionFlushExample">
+     
+
+
+
+
+      <div class="accordion-item cos-sidebar-accordion-item">
+        <div class="accordion-header cos-sidebar-accordion-header" id="flush-headingOne">
+          <h2 class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          I DATI
+          </h2>
+        </div>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div id="dati" class="accordion-body cos-sidebar-accordion-body">
+            <h4>Concentrazione di CO2 - PPM</h4>
+
+            <div class="body-inner">
+                <div class="row py-4">
+                  <div class="col-5">
+                    <img src="/curaos/assets/img/graphs/ppm_gradient_atmosphere.svg" alt="Monkey face" style="width: 100%; height: auto;">
+                  </div>
+
+                  <div class="col-7 d-flex flex-wrap align-self-start">
+                    <div class="col-4 px-1">
+                      <h3>CO2 atmosferica </h3>
+                        <span class="">421 PPM </span>
+                      <h3>CO2 circonstante </h3>
+                    </div>
+                    <div class="col-8 px-1">
+                      <img class="img-fluid" src="/curaos/assets/img/graphs/legenda_orizzontale.png">
+                    </div>
+                    <div class="col-12 py-3">
+                      <h3>Lettura della visualizzazione:</h3>
+                      <p>L'area campita dalle forme astratte in movimento rappresenta la concentrazione (espressa in Parti Per Milione) nell'ambiente circostante alla tua sentinella.
+                        Nei luoghi chiusi e non ventilati spesso si raggiungono valori soglia intorno ai 1000-1100 PPM. La
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <h4>Concentrazione di altri inquinanti <BR> (Biossido di Azoto - NO2 - e Ozono - O3)</h4>
+                <div class="row py-4">
+                  <div class="col-5">
+                    <img src="/curaos/assets/img/graphs/ppm_gradient_atmosphere.svg" alt="Monkey face" style="width: 100%; height: auto;">
+                  </div>
+
+                  <div class="col-7 d-flex flex-wrap align-self-start">
+                    <div class="col-4 px-1">
+                      <h3>CO2 atmosferica </h3>
+                        <span class="">421 PPM </span>
+                      <h3>CO2 circonstante </h3>
+                    </div>
+                    <div class="col-8 px-1">
+                      <img class="img-fluid" src="/curaos/assets/img/graphs/legenda_orizzontale.png">
+                    </div>
+                    <div class="col-12 py-3">
+                      <h3>Lettura della visualizzazione:</h3>
+                      <p>L'area campita dalle forme astratte in movimento rappresenta la concentrazione (espressa in Parti Per Milione) nell'ambiente circostante alla tua sentinella.
+                        Nei luoghi chiusi e non ventilati spesso si raggiungono valori soglia intorno ai 1000-1100 PPM. La
+                      </p>
+                    </div>
+                  </div>
+                </div>
+          </div>
+            
+
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item cos-sidebar-accordion-item">
+        <div class="accordion-header cos-sidebar-accordion-header" id="flush-headingTwo">
+          <h2 class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+          IL PROGETTO
+          </h2>
+        </div>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+          <div id="dati" class="accordion-body cos-sidebar-accordion-body">
+
+            <div class="container-dati d-flex">
+                <div class="col-8">
+                  <h4>Abstract </h4>
+                      <p>le sempre crescenti pratiche di open government e l’adesione al modello open source hanno portato ad un regolare confronto tra l’ambiente pubblico (non solo legato all’amministrazione ma anche al vivere con gli altri come cittadini) e alla creazione di nuove forme di comunicazione sperimentali a scopi principalmente accademico/informativi. Questa intersezione si è evoluta verso lo sviluppo sempre maggiore di iniziative di carattere pubblico, in cui gli interessi verso la lettura di dati e la tecnologia che li genera sono al centro del progetto stesso come Open Citizen o SensorCommunity. Questa tesi si pone l’obiettivo di analizzare queste iniziative per comprendere o trovare (se possibili) pattern progettuali divenuti utili ai molteplici attori della città (PA, progettisti – urbani, della comunicazione, cittadini stessi, operatori urbani ecc.) e di valutarne ulteriori opportunità progettuali. Attraverso lo sviluppo di un’ipotetica iniziativa attorno ad un prototipo di progetto, la tesi propone un approccio pratico ad una di queste opportunità derivante dal retaggio di un ampio spettro di progetti non solo partecipativi ma anche di studi di comunicazione o di progettazione grafica. Nello specifico il prototipo proverà a sondare nel campo progettuale del verde (pubblico/privato) e della qualità dell’aria, la possibilità di intersecare gli spazi pubblici e quelli privati. L’obiettivo finale è quello di dimostrare che ulteriori applicazioni a beneficio della comunità cittadina sarebbero disponibili abbandonando strade centralizzate istituzionali mono-fonte di database aperti o progetti divulgativi con un discreto potenziale di sensibilizzazione, convergendo verso pratiche di comunicazione già presenti nel settore del web 3.0 che non compromettano però la privacy del singolo. 
+                      </p>
+                </div>
+          </div>
+            
+          </div>
+        </div>
+      </div>
+
+  
+      <div class="accordion-item cos-sidebar-accordion-item">
+        <div class="accordion-header cos-sidebar-accordion-header" id="flush-headingThree">
+          <h2 class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+          LA SENTINELLA 
+          </h2>
+        </div>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+          <div id="dati" class="accordion-body cos-sidebar-accordion-body">
+
+            <div class="container-dati d-flex">
+                <div class="col-12">
+                  <h2> Consultazione dati 2021 </h2>
+c
+                CIAOOO
+                </div>
+          </div>
+            
+          </div>
+        </div>
+      </div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+   
+   
+
+
+
+
+
+
+
+
+
+
+
+
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+
+    <footer class="gos-footer">
+<div class="gos-footer-container d-flex h-100">
+    <div class="col-12 gos-footer-inner">
+      <div class="gos-footer-header col-12 text-center">
+        <h2>
+          cura O.S.
+        </h2>
+      </div>
+          <!-- 
+          <div class="footer-items d-flex h-100 flex-column flex-lg-row justify-content-center py-3 px-3">
+            
+            <a class="gos-link px-lg-5 text-center" href="/about/"> Il progetto
+            </a>
+            
+            <a class="gos-link px-lg-5 text-center" href="/dati/"> dati
+            </a>
+            
+            <a class="gos-link px-lg-5 text-center" href="/giardinopersonale/"> giardino personale
+            </a>
+            
+            <a class="gos-link px-lg-5 text-center" href="/sentinella/"> La sentinella
+            </a>
+            
+            <a class="gos-link px-lg-5 text-center" href="/blog/"> blog
+            </a>
+            
+            <a class="gos-link px-lg-5 text-center" href="/parcourbano/"> parcourbano
+            </a>
+            
+          </div> -->
+    </div>
+
+</div>
+</footer>
+
+
+
+  </div>
+</div>
+
+
+
+
 
   <body>
 

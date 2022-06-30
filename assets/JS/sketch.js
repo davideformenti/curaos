@@ -14,9 +14,6 @@ let ExtMoisture;
 
 var esposizione;
 let water_pg;
-let light_pg;
-let soil_pg;
-let leaf_pg;
 
 
 
@@ -60,6 +57,7 @@ function setup() {
   
   createCanvas(windowWidth, windowHeight);
   water_pg= createGraphics(width,height);
+  
  
 
 
@@ -115,12 +113,15 @@ function setup() {
 
  } 
 
-function draw() {
-  
+
+
  
 
-    water_monitor();
 
+function draw() {
+  
+
+    water_monitor();
      water_pg.colorMode(HSL,360, 100, 100,1)
      var background_lightness = esposizione;
      var background_color = map(background_lightness,0,100,220,45);
@@ -172,7 +173,6 @@ function draw() {
      
      }
 
-   
  
 }
 
@@ -187,6 +187,7 @@ function getPPMData() {
     PPM = floor(response.last_value); // store the data we're interested in
     // draw an ellipse
     console.log(PPM);
+  
   });
 }
 
@@ -383,7 +384,7 @@ function water_monitor(){
       getTempData();
       getSoilHumData();
       getExtHumData();
-
+      
     }
     counter++;
 /*   water_pg.colorMode(HSL,360, 100, 100,1)
@@ -470,6 +471,53 @@ function blob(size, xCenter, yCenter, k, t, noisiness) {
 }
 }
 
+/* 
+const request = new XMLHttpRequest();
+request.open ("GET", "https://io.adafruit.com/api/v2/davideformenti/feeds/sentinella.ppm");
+
+request.send();
+request.onload = () => {
+  if(request.status===200) {
+  console.log("DIOMERDAAA")
+  console.log(JSON.parse(request.response).last_value)
+  var ppm_array = [];
+  ppm_array.push(JSON.parse(request.response).last_value)
+  console.log(ppm_array)
+  }
+}
+ */
+
+/* let running = false;
+//called on start
+function run() {
+    //some code
+    running = true;
+    getLatestData();
+    
+    
+}
+
+var ppm_array = [];
 
 
+      async function getLatestData() {
+       setInterval(function() {
+      let xmlhttp = new XMLHttpRequest(); 
+      xmlhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        console.log("diomnerdaaa")
+        console.log(JSON.parse(xmlhttp.response).last_value)
+        ppm_array.push(JSON.parse(xmlhttp.response).last_value)
+
+
+      } 
+
+    };        
+     xmlhttp.open("GET", "https://io.adafruit.com/api/v2/davideformenti/feeds/sentinella.ppm", true);         
+     xmlhttp.send(); 
+    }, 500); }
+
+
+
+   run(); */
 

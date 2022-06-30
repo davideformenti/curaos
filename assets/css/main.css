@@ -53,13 +53,11 @@ font-family: 'Work Sans', sans-serif; */
 
 .ws-bold { font-family: Work Sans; font-weight: 700; }
 
-.gos-footer { background-color: #093824; height: 280px; position: relative; bottom: 0px; }
+.gos-footer { width: 90vw; height: 60px; position: absolute; bottom: 0px; }
 
-.gos-footer .gos-footer-container .gos-footer-inner .gos-footer-header { border-bottom: 2px solid #E6F47B; }
+.gos-footer .gos-footer-container .gos-footer-inner h2 { color: black; font-family: Chillax-variable; font-weight: 400; font-size: 30px; }
 
-.gos-footer .gos-footer-container .gos-footer-inner h2 { color: #E6F47B; font-size: 30px; }
-
-.gos-footer .gos-footer-container .gos-footer-inner a { text-decoration: none; color: #E6F47B; font-size: 20px; font-family: Oswald; font-weight: 200; }
+.gos-footer .gos-footer-container .gos-footer-inner a { text-decoration: none; color: black; font-size: 20px; font-family: Chillax-variable; font-weight: 200; }
 
 .gos-header { background-color: #E6F47B; height: 100px; width: 100vw; transition: all 0.3s; }
 
@@ -83,7 +81,7 @@ font-family: 'Work Sans', sans-serif; */
 
 .gos-header .offcanvas-end .offcanvas-container .offcanvas-container-info { border-right: 2px solid #093824; }
 
-.gos-header .offcanvas-end .menu-items a { font-size: 20px; font-weight: 200; font-family: Oswald; color: #093824; text-decoration: none; text-transform: uppercase; }
+.gos-header .offcanvas-end .menu-items a { font-size: 20px; font-weight: 200; font-family: Chillax-variable; color: #093824; text-decoration: none; text-transform: uppercase; }
 
 @media (min-width: 768px) { .gos-header .offcanvas-end .menu-items a { font-size: 52px; } }
 
@@ -102,6 +100,30 @@ font-family: 'Work Sans', sans-serif; */
 .change .bar2 { opacity: 0; }
 
 .change .bar3 { -webkit-transform: rotate(45deg) translate(-8px, -8px); transform: rotate(45deg) translate(-8px, -8px); }
+
+.cos-hamburger { position: fixed; z-index: 1000; right: 40px; top: 40px; }
+
+.cos-sidebar { background-color: #d9d9d9; backdrop-filter: blur(10px); width: 90vw; }
+
+.cos-sidebar .cos-sidebar-body { padding: 0px; }
+
+.cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container { background-color: transparent; }
+
+.cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item { background-color: transparent; }
+
+.cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-header h2 { background-color: transparent; color: #093824; font-family: Chillax-variable; font-weight: 700; font-size: 15px; padding: 10px; border-bottom: 2px solid; }
+
+.cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body { background-color: transparent; height: 73vh; overflow: scroll; }
+
+.cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body h4 { font-family: Chillax-variable; font-size: 40px; font-weight: 400; }
+
+.cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body .body-inner h2 { font-family: Chillax-variable; font-size: 25px; font-weight: 400; }
+
+.cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body .body-inner h3 { font-family: Chillax-variable; font-size: 20px; font-weight: 400; }
+
+.cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body .body-inner span { font-family: Oswald; font-size: 30px; font-weight: 300; }
+
+::-webkit-scrollbar { display: none; }
 
 .gos-section-two-columns { background-position: center; background-size: cover; background-repeat: no-repeat; height: 100vh; /* border-bottom: 4px solid $tertiary; */ /* @include media-breakpoint-up(lg) { } */ }
 
@@ -145,7 +167,7 @@ circle { stroke-width: 2; cursor: pointer; transition: 0.5s fill, 0.5s stroke-wi
 
 circle:hover { fill: #5e5ee5; stroke-width: 18; }
 
-.gos-general-infotab-g { display: fixed; background-color: transparent; width: 100vw; height: 100%; position: absolute; top: 0; left: 0; }
+.gos-general-infotab-g { display: fixed; background-color: transparent; width: 100vw; /* height: 100%; */ position: absolute; top: 0; left: 0; }
 
 @media (min-width: 992px) { .gos-general-infotab-g { display: fixed; background-color: transparent; width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; /*     border-bottom: 2px solid $primary; */ } }
 
@@ -157,15 +179,17 @@ circle:hover { fill: #5e5ee5; stroke-width: 18; }
 
 @media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .gos-StationName .date { font-size: 40px; } }
 
-.gos-general-infotab-g .gos-general-infotab-container .gos-StationName h2 { font-size: 72px; font-family: Chillax-Variable; font-weight: 400; text-align: right; line-height: .75; }
+.gos-general-infotab-g .gos-general-infotab-container .gos-StationName h2 { font-size: 50px; font-family: Chillax-Variable; font-weight: 400; text-align: right; line-height: .75; }
 
 @media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .gos-StationName h2 { font-size: 80px; } }
 
-.gos-general-infotab-g .gos-general-infotab-container .gos-StationName p { font-family: Oswald; font-weight: 100; font-size: 60px; }
+.gos-general-infotab-g .gos-general-infotab-container .gos-StationName p { font-family: Oswald; font-weight: 100; font-size: 40px; }
 
 @media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .gos-StationName p { font-size: 70px; } }
 
 .gos-general-infotab-g .gos-general-infotab-container .PPMlabel { padding: 20px; font-weight: 100; left: 20px; }
+
+.gos-general-infotab-g .gos-general-infotab-container .apportoIdrico { border-top: 2px solid; border-bottom: 2px solid; }
 
 .gos-general-infotab-g .gos-general-infotab-container .apportoIdrico img { max-width: fit-content; height: max-content; }
 
@@ -187,7 +211,7 @@ circle:hover { fill: #5e5ee5; stroke-width: 18; }
 
 .gos-general-infotab-g .gos-general-infotab-container .content .info-inner .udm { font-size: 25px; font-family: Chillax-variable; font-weight: 200; }
 
-@media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .content .info-inner .udm { font-size: 60px; } }
+@media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .content .info-inner .udm { font-size: 40px; } }
 
 .gos-general-infotab-g .gos-general-infotab-container .content .info-inner .info-heading { font-size: 40px; }
 
