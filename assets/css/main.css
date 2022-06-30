@@ -101,7 +101,7 @@ font-family: 'Work Sans', sans-serif; */
 
 .change .bar3 { -webkit-transform: rotate(45deg) translate(-8px, -8px); transform: rotate(45deg) translate(-8px, -8px); }
 
-.cos-hamburger { position: fixed; z-index: 1000; right: 40px; top: 40px; }
+.cos-hamburger { /* position: fixed; z-index: 1000; right: $grid-gutter-width*2; top: $grid-gutter-width*2; */ }
 
 .cos-sidebar { background-color: #d9d9d9; backdrop-filter: blur(10px); width: 90vw; }
 
@@ -113,9 +113,13 @@ font-family: 'Work Sans', sans-serif; */
 
 .cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-header h2 { background-color: transparent; color: #093824; font-family: Chillax-variable; font-weight: 700; font-size: 15px; padding: 10px; border-bottom: 2px solid; }
 
-.cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body { background-color: transparent; height: 73vh; overflow: scroll; }
+.cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body { background-color: transparent; overflow: scroll; height: 70vh; }
 
-.cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body h4 { font-family: Chillax-variable; font-size: 40px; font-weight: 400; }
+@media (min-width: 992px) { .cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body { height: 73vh; } }
+
+.cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body h4 { font-family: Chillax-variable; font-size: 20px; font-weight: 400; }
+
+@media (min-width: 992px) { .cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body h4 { font-size: 40px; } }
 
 .cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body .body-inner h2 { font-family: Chillax-variable; font-size: 25px; font-weight: 400; }
 
