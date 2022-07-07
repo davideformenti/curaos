@@ -28,21 +28,23 @@ map.addSource('states', {
  
 // The feature-state dependent fill-opacity expression will render the hover effect
 // when a feature's hover state is set to true.
-map.addLayer({
-'id': 'state-fills',
-'type': 'fill',
-'source': 'states',
-'layout': {},
-'paint': {
-'fill-color': paolo,
-'fill-opacity': [
-'case',
-['boolean', ['feature-state', 'hover'], false],
-0.3,
-0.6
-]
-}
-});
+      map.addLayer({
+        'id': 'state-fills',
+        'type': 'fill',
+        'source': 'states',
+        'layout': {
+
+        },
+        'paint': {
+          'fill-color': paolo,
+          'fill-opacity': [
+          'case',
+          ['boolean', ['feature-state', 'hover'], false],
+          0.3,
+          0.6
+          ]
+        }
+      });
  
 map.addLayer({
 'id': 'state-borders',
@@ -50,8 +52,8 @@ map.addLayer({
 'source': 'states',
 'layout': {},
 'paint': {
-'line-color': '#FFFFFF',
-'line-width': 3
+'line-color': '#ffd056',
+'line-width': 2
 }
 });
 
@@ -167,7 +169,7 @@ drawstazioni(stazioni)
                 .data(data.features)
                 .enter()
                 .append("circle")
-                    .attr("r", 16).attr("fill","blue")
+                    .attr("r", 10).attr("fill","#ffd056")
                     .on("click", function(d) {
                         alert(d.properties.name);
                     });
@@ -195,7 +197,7 @@ drawstazioni(stazioni)
                 .data(data.features)
                 .enter()
                 .append("circle")
-                    .attr("r", 10).attr("fill","yellow")
+                    .attr("r", 10).attr("fill","red")
                     .on("click", function(d) {
                         d3.select(this).style('fill', 'white'); 
                         d3.select('#location').text(d.properties.nome);
@@ -216,8 +218,7 @@ drawstazioni(stazioni)
                       })
                       //Add Event Listeners | mouseout
                       .on('mouseout', function(d) { 
-                        d3.select(this).style('fill', d.color);
-                        d3.select(this).style('stroke','black');
+                        d3.select(this).style('fill', 'red');
                         d3.select('#tip')
                           .style('display', 'none');
                       });

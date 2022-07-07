@@ -101,7 +101,7 @@ font-family: 'Work Sans', sans-serif; */
 
 .change .bar3 { -webkit-transform: rotate(45deg) translate(-8px, -8px); transform: rotate(45deg) translate(-8px, -8px); }
 
-.cos-hamburger { /* position: fixed; z-index: 1000; right: $grid-gutter-width*2; top: $grid-gutter-width*2; */ }
+.cos-hamburger { border: 2px solid; border-radius: 10px; padding: 10px; }
 
 .cos-sidebar { background-color: #d9d9d9; backdrop-filter: blur(10px); width: 90vw; }
 
@@ -161,6 +161,8 @@ circle:hover { fill: #5e5ee5; stroke-width: 18; }
 
 .gos-general-infotab .gos-general-infotab-container .info-inner .info { font-family: work sans; font-size: 25px; }
 
+.swap-link { text-decoration: none; color: white; border: 2px solid; border-radius: 10px; padding: 10px; }
+
 #defaultCanvas0 { overflow: hidden; }
 
 .overlay { background-image: url("https://64.media.tumblr.com/96bfcda9ab211b730d680a052d19f83d/tumblr_o7w2veChcr1runoqyo4_540.gifv"); height: 100%; width: 100%; opacity: 0.15; background-repeat: no-repeat; background-size: cover; position: absolute; }
@@ -183,13 +185,13 @@ circle:hover { fill: #5e5ee5; stroke-width: 18; }
 
 @media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .gos-StationName .date { font-size: 40px; } }
 
-.gos-general-infotab-g .gos-general-infotab-container .gos-StationName h2 { font-size: 50px; font-family: Chillax-Variable; font-weight: 400; text-align: right; line-height: .75; }
+.gos-general-infotab-g .gos-general-infotab-container .gos-StationName h2 { font-size: 50px; font-family: Chillax-Variable; font-weight: 400; text-align: right; line-height: .75; padding-bottom: 20px; }
 
 @media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .gos-StationName h2 { font-size: 80px; } }
 
-.gos-general-infotab-g .gos-general-infotab-container .gos-StationName p { font-family: Oswald; font-weight: 100; font-size: 40px; }
+.gos-general-infotab-g .gos-general-infotab-container .gos-StationName p { font-size: 20px; font-family: Chillax-Variable; font-weight: 300; }
 
-@media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .gos-StationName p { font-size: 70px; } }
+@media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .gos-StationName p { font-size: 40px; } }
 
 .gos-general-infotab-g .gos-general-infotab-container .PPMlabel { padding: 20px; font-weight: 100; left: 20px; }
 
