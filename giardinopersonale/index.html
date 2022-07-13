@@ -148,9 +148,10 @@
 
             <div class="container-dati d-flex">
                 <div class="col-12">
-                  <h2> Consultazione dati 2021 </h2>
-c
-                CIAOOO
+                  <h2> 
+                    Consultazione dati 2021
+                  </h2>
+
                 </div>
           </div>
             
@@ -191,40 +192,51 @@ c
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 
 
-    <footer class="gos-footer">
-<div class="gos-footer-container d-flex h-100">
-    <div class="col-12 gos-footer-inner">
-      <div class="gos-footer-header col-12 text-center">
-        <h2>
-          cura O.S.
-        </h2>
-      </div>
-          <!-- 
-          <div class="footer-items d-flex h-100 flex-column flex-lg-row justify-content-center py-3 px-3">
-            
-            <a class="gos-link px-lg-5 text-center" href="/about/"> Il progetto
-            </a>
-            
-            <a class="gos-link px-lg-5 text-center" href="/dati/"> dati
-            </a>
-            
-            <a class="gos-link px-lg-5 text-center" href="/giardinopersonale/"> giardino personale
-            </a>
-            
-            <a class="gos-link px-lg-5 text-center" href="/sentinella/"> La sentinella
-            </a>
-            
-            <a class="gos-link px-lg-5 text-center" href="/blog/"> blog
-            </a>
-            
-            <a class="gos-link px-lg-5 text-center" href="/parcourbano/"> parcourbano
-            </a>
-            
-          </div> -->
-    </div>
+    <footer class="gos-footer" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
 
-</div>
+  <div class="gos-footer-container d-flex h-100">
+    
+      <div class="col-12 gos-footer-inner">
+
+        <svg xmlns="http://www.w3.org/2000/svg"  id="cos-hamburger" fill="currentColor" class="bi bi-chevron-compact-up" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
+        </svg>
+
+        
+        <div class="gos-footer-header col-12 text-center">
+          
+          <h2>
+            cura O.S.
+          </h2>
+        </div>
+            <!-- 
+            <div class="footer-items d-flex h-100 flex-column flex-lg-row justify-content-center py-3 px-3">
+              
+              <a class="gos-link px-lg-5 text-center" href="/about/"> Il progetto
+              </a>
+              
+              <a class="gos-link px-lg-5 text-center" href="/dati/"> dati
+              </a>
+              
+              <a class="gos-link px-lg-5 text-center" href="/giardinopersonale/"> giardino personale
+              </a>
+              
+              <a class="gos-link px-lg-5 text-center" href="/sentinella/"> La sentinella
+              </a>
+              
+              <a class="gos-link px-lg-5 text-center" href="/blog/"> blog
+              </a>
+              
+              <a class="gos-link px-lg-5 text-center" href="/parcourbano/"> parcourbano
+              </a>
+              
+            </div> -->
+      </div>
+
+  </div>
 </footer>
+
+
 
 
 
@@ -250,9 +262,8 @@ c
 
   <div id="gos-info-tab" class="gos-general-infotab-g gos-tab">
         <div id="tooltip" class="gos-general-infotab-container d-flex flex-column align-items-center flex-wrap-reverse flex-lg-wrap justify-content-lg-around align-content-lg-center flex-lg-row-reverse align-items-lg-end">
-          <div class="py-3 gos-StationName">           
-            <span class="cos-hamburger d-none d-lg-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Esplora</span>
-            <div class="d-flex px-3 flex-column align-items-end col-12">
+          <div class="gos-StationName py-3 py-lg-0">           
+            <div class="d-flex px-3 flex-column align-items-start col-12">
                 <div class="d-flex w-100 justify-content-between align-items-end">
                   <span id="date-time" class="date"> </span>
                   <p class="m-0">
@@ -263,55 +274,54 @@ c
                 </div>
 
               <h2 class="m-0">P.zza Bausan</h2>
-              <div class="col-12 d-flex flex-row-reverse justify-content-between align-items-end">
-                <span class="cos-hamburger d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Esplora</span>
+              <div class="col-12 d-flex flex-row-reverse justify-content-center align-items-end">
                 <a class="swap-link" href="/curaos/parcourbano">Vai al parco urbano</a>
               </div>
             </div>
           </div>
 
           
-          <div class="content mx-4 d-flex flex-column justify-content-start align-items-center">
+          <div class="content mx-4 p-3 d-flex flex-column justify-content-start align-items-center">
             
 
 
-          <div class="info-inner col-10 col-lg-12 PPMlabel d-flex align-self-lg-start justify-content-between">
-            <img class="w-25" src="/curaos/assets/img/icons/air-icon.png">
+          <div class="info-inner col-10 col-lg-12 PPMlabel d-flex align-self-lg-start">
+            <img class="" src="/curaos/assets/img/icons/air-icon.png">
             <div class="label">
-              <h2 class=" text-end text-lg-start">QUALITA DELL'ARIA</h2>
-              <div class="value d-flex justify-content-between justify-content-lg-start">
+              <h2 class=" text-start">QUALITA DELL'ARIA</h2>
+              <div class="value d-flex justify-content-lg-start">
                 <span id="PPM" class="info"></span>
-              <span class="udm align-self-end"> PPM <br> CO2</span>
+              <span class="udm align-self-end"> PPM inquinanti</span>
             </div>
             </div>
           </div>                  
           
-          <div class="apportoIdrico p-2 col-10 col-lg-12 info-inner my-2">
-            <div class="col-12 d-flex justify-content-between">
-              <img class="w-25" src="/curaos/assets/img/icons/water-icon.png">
+          <div class="apportoIdrico col-10 col-lg-12 info-inner my-2">
+            <div class="col-12 py-2 d-flex">
+              <img class="" src="/curaos/assets/img/icons/water-icon.png">
               <div class="hydro-label-heading d-flex flex-column">
-                <h2 class="">APPORTO IDRICO</h2>
-                <h4 class="">Ultimo rifornimento: 20/6/2022</h4>
-                <h4 class="">Stato terreno: ottimale</h4>
+                <h2 class="m-0">APPORTO IDRICO</h2>
+                <h4 class="m-0">Ultimo rifornimento: 20/6/2022</h4>
+                <h4 class="m-0">Stato terreno: ottimale</h4>
             </div>
             </div>
             <div class="apportoIdrico-inner d-flex justify-content-between">
 
-              <div class="SoilHumidityLabel p-2 d-flex col-5 flex-column-reverse">
-                <div class="label d-flex">
-                  <h2 class="">Umidità terreno</h2>
+              <div class="SoilHumidityLabel text-center d-flex col-5 flex-column-reverse">
+                <div class="label">
+                  <h3 class="">Umidità terreno</h2>
                 <div class="value">
-                  <span id="ApportoIdrico" class="info p-2"></span><span class="udm">%</span>
+                  <span id="ApportoIdrico" class="info p-2"></span><span class="">%</span>
                 </div>
               </div>
               </div>
 
 
-              <div class="HumidityLabel p-2 d-flex col-6 flex-column-reverse">
-                <div class="label d-flex align-self-end">
-                  <h2 class="">Umidità ambientale</h2>
+              <div class="HumidityLabel text-center d-flex col-6 flex-column-reverse">
+                <div class="label align-self-end">
+                  <h3 class="">Umidità ambientale</h2>
                 <div class="value">
-                  <span id="ExternalHumidity" class="info p-2"></span><span class="udm">%</span>
+                  <span id="ExternalHumidity" class="info p-2"></span><span class="">%</span>
                 </div>
               </div>
               </div>
@@ -320,14 +330,20 @@ c
             </div>
           </div>
           
-          <div class="info-inner flex-nowrap p-2 my-3 col-10 col-lg-12 LightLabel">
-              <img class="w-25" src="/curaos/assets/img/icons/light-icon.png">
+          <div class="info-inner flex-nowrap col-10 col-lg-12 LightLabel">
+              <img class="" src="/curaos/assets/img/icons/light-icon.png">
             <div class="label">
-              <h2>ESPOSIZIONE:</h2>
-            
-            <div class="value">
+              <h2 clss="m-0">ELIOFANIA RELATIVA</h2>
+            <div clss="d-flex">
+            <div class="value d-inline">
               <span id="esposizone" class="info"></span><span>%</span>
             </div>
+
+            <div class="other_infos d-inline-flex flex-column-reverse ps-3">
+              <p class="m-0"> 9.00 - 15.00 (3 ore)</p>
+              <p class="m-0"> eliofania ottimale:</p>
+            </div>
+          </div>
           </div>
           </div>
 
@@ -335,6 +351,7 @@ c
         </div>
       </div>    
     </div> 
+    
     
 <!--  
 <div class="overlay">
@@ -380,6 +397,52 @@ c
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
   </body>
+  
+  <footer class="gos-footer" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+
+  <div class="gos-footer-container d-flex h-100">
+    
+      <div class="col-12 gos-footer-inner">
+
+        <svg xmlns="http://www.w3.org/2000/svg"  id="cos-hamburger" fill="currentColor" class="bi bi-chevron-compact-up" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
+        </svg>
+
+        
+        <div class="gos-footer-header col-12 text-center">
+          
+          <h2>
+            cura O.S.
+          </h2>
+        </div>
+            <!-- 
+            <div class="footer-items d-flex h-100 flex-column flex-lg-row justify-content-center py-3 px-3">
+              
+              <a class="gos-link px-lg-5 text-center" href="/about/"> Il progetto
+              </a>
+              
+              <a class="gos-link px-lg-5 text-center" href="/dati/"> dati
+              </a>
+              
+              <a class="gos-link px-lg-5 text-center" href="/giardinopersonale/"> giardino personale
+              </a>
+              
+              <a class="gos-link px-lg-5 text-center" href="/sentinella/"> La sentinella
+              </a>
+              
+              <a class="gos-link px-lg-5 text-center" href="/blog/"> blog
+              </a>
+              
+              <a class="gos-link px-lg-5 text-center" href="/parcourbano/"> parcourbano
+              </a>
+              
+            </div> -->
+      </div>
+
+  </div>
+</footer>
+
+
 
 
 
