@@ -57,7 +57,7 @@ font-family: 'Work Sans', sans-serif; */
 
 .gos-footer { width: 100vw; height: 60px; position: absolute; bottom: 0px; }
 
-.gos-footer .gos-footer-container .gos-footer-inner h2 { color: #E6F47B; font-family: Chillax-variable; font-weight: 400; font-size: 20px; }
+.gos-footer .gos-footer-container .gos-footer-inner h2 { color: #ffffff; font-family: Chillax-variable; font-weight: 400; font-size: 20px; }
 
 .gos-footer .gos-footer-container .gos-footer-inner a { text-decoration: none; color: black; font-size: 20px; font-family: Chillax-variable; font-weight: 200; }
 
@@ -181,7 +181,7 @@ circle:hover { fill: #5e5ee5; stroke-width: 18; }
 
 @media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .gos-StationName .date { font-size: 40px; } }
 
-.gos-general-infotab-g .gos-general-infotab-container .gos-StationName h2 { font-size: 50px; font-family: Chillax-Variable; font-weight: 400; text-align: right; line-height: .75; padding-bottom: 20px; }
+.gos-general-infotab-g .gos-general-infotab-container .gos-StationName h2 { font-size: 30px; font-family: Chillax-Variable; font-weight: 400; text-align: right; line-height: .75; padding-bottom: 20px; }
 
 @media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .gos-StationName h2 { font-size: 80px; } }
 
@@ -189,7 +189,7 @@ circle:hover { fill: #5e5ee5; stroke-width: 18; }
 
 @media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .gos-StationName p { font-size: 40px; } }
 
-.gos-general-infotab-g .gos-general-infotab-container .content { webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); background-color: rgba(225, 225, 225, 0.2); border-radius: 10px; }
+.gos-general-infotab-g .gos-general-infotab-container .content { backdrop-filter: blur(2px) contrast(60%); -webkit-backdrop-filter: blur(2px) contrast(60%); background-color: rgba(225, 225, 225, 0.2); border-radius: 10px; }
 
 .gos-general-infotab-g .gos-general-infotab-container .content .PPMlabel { font-weight: 100; left: 20px; }
 
