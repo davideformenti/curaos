@@ -199,33 +199,37 @@ circle:hover { fill: #5e5ee5; stroke-width: 18; }
 
 .gos-general-infotab-g .gos-general-infotab-container .content .PPMlabel .label h2 { font-family: Chillax-variable; font-weight: 400; font-size: 20px; }
 
-.gos-general-infotab-g .gos-general-infotab-container .content .PPMlabel .label .value .info { font-family: Oswald; font-weight: 200; font-size: 40px; }
+.gos-general-infotab-g .gos-general-infotab-container .content .PPMlabel .label .value .info { font-family: Oswald; font-weight: 200; font-size: 40px; line-height: .95; }
+
+.gos-general-infotab-g .gos-general-infotab-container .content .PPMlabel .label .value .udm { padding-left: 10px; font-family: Chillax-variable; font-weight: 200; font-size: 15px; line-height: .95; }
 
 .gos-general-infotab-g .gos-general-infotab-container .content .apportoIdrico { border-top: 1px solid; }
 
-.gos-general-infotab-g .gos-general-infotab-container .content .apportoIdrico img { width: 90%; height: 50px; object-fit: contain; object-position: bottom; flex-basis: fit-content; }
+.gos-general-infotab-g .gos-general-infotab-container .content .apportoIdrico .icon { width: 40px; padding-right: 10px; }
 
-@media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .content .apportoIdrico img { width: 100%; height: 80px; } }
-
-.gos-general-infotab-g .gos-general-infotab-container .content .apportoIdrico .hydro-label-heading h2 { font-family: Chillax-variable; font-weight: 500; font-size: 20px; }
+.gos-general-infotab-g .gos-general-infotab-container .content .apportoIdrico .hydro-label-heading h2 { font-family: Chillax-variable; font-weight: 400; font-size: 20px; }
 
 .gos-general-infotab-g .gos-general-infotab-container .content .apportoIdrico .hydro-label-heading h4 { font-family: Chillax-variable; font-weight: 200; font-size: 15px; }
 
 .gos-general-infotab-g .gos-general-infotab-container .content .apportoIdrico .apportoIdrico-inner { border-radius: 10px; border: 1px solid; padding: 10px; background-color: rgba(50, 50, 50, 0.2); }
 
-.gos-general-infotab-g .gos-general-infotab-container .content .apportoIdrico .apportoIdrico-inner h3 { font-weight: 200; font-size: 15px; }
+.gos-general-infotab-g .gos-general-infotab-container .content .apportoIdrico .apportoIdrico-inner .SoilHumidityLabel .label h3 { font-family: Chillax-variable; font-weight: 200; font-size: 15px; }
+
+.gos-general-infotab-g .gos-general-infotab-container .content .apportoIdrico .apportoIdrico-inner .SoilHumidityLabel .label .value { font-family: Oswald; font-weight: 200; font-size: 40px; line-height: .95; }
+
+.gos-general-infotab-g .gos-general-infotab-container .content .apportoIdrico .apportoIdrico-inner .HumidityLabel .label h3 { font-family: Chillax-variable; font-weight: 200; font-size: 15px; }
+
+.gos-general-infotab-g .gos-general-infotab-container .content .apportoIdrico .apportoIdrico-inner .HumidityLabel .label .value { font-family: Oswald; font-weight: 200; font-size: 40px; line-height: .95; }
 
 .gos-general-infotab-g .gos-general-infotab-container .content .LightLabel { display: flex; flex-direction: row; align-content: center; flex-wrap: wrap; justify-content: start; align-items: flex-start; border-top: 1px solid; margin-top: 10px; padding-top: 10px; }
 
 .gos-general-infotab-g .gos-general-infotab-container .content .LightLabel .icon { width: 40px; padding-right: 10px; }
 
-@media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .content .LightLabel .icon { width: 100%; height: 80px; } }
-
 .gos-general-infotab-g .gos-general-infotab-container .content .LightLabel h2 { font-family: Chillax-variable; font-weight: 400; font-size: 20px; }
 
-.gos-general-infotab-g .gos-general-infotab-container .content .LightLabel .label .value { font-family: Oswald; font-weight: 200; font-size: 40px; }
+.gos-general-infotab-g .gos-general-infotab-container .content .LightLabel .label .value { font-family: Oswald; font-weight: 200; font-size: 40px; line-height: .95; }
 
-.gos-general-infotab-g .gos-general-infotab-container .content .LightLabel .label .other_infos { font-family: Chillax-variable; }
+.gos-general-infotab-g .gos-general-infotab-container .content .LightLabel .label .other_infos { font-family: Chillax-variable; font-weight: 200; font-size: 15px; }
 
 body { margin: 0; padding: 0; overflow: hidden; /* position: relative; top:$grid-gutter-width*5; */ }
 
