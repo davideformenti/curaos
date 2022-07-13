@@ -169,15 +169,11 @@ circle:hover { fill: #5e5ee5; stroke-width: 18; }
 
 .overlay { background-image: url("https://64.media.tumblr.com/96bfcda9ab211b730d680a052d19f83d/tumblr_o7w2veChcr1runoqyo4_540.gifv"); height: 100%; width: 100%; opacity: 0.15; background-repeat: no-repeat; background-size: cover; position: absolute; }
 
-.gos-general-infotab-g { display: fixed; background-color: transparent; width: 100vw; /* height: 100%; */ position: absolute; top: 0; left: 0; }
+.gos-general-infotab-g { display: fixed; background-color: transparent; width: 100vw; position: absolute; top: 0; left: 0; }
 
-@media (min-width: 992px) { .gos-general-infotab-g { display: fixed; background-color: transparent; width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; /*     border-bottom: 2px solid $primary; */ } }
+@media (min-width: 992px) { .gos-general-infotab-g { display: fixed; background-color: transparent; width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; } }
 
-.gos-general-infotab-g .gos-general-infotab-container { height: 100%; color: aliceblue; /* text-shadow: 1px 3px black; mix-blend-mode: overlay; */ }
-
-.gos-general-infotab-g .gos-general-infotab-container img { width: 100%; height: 50px; object-fit: contain; object-position: bottom; flex-basis: fit-content; padding-right: 20px; }
-
-@media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container img { width: 100%; height: 80px; object-fit: contain; object-position: bottom; flex-basis: fit-content; } }
+.gos-general-infotab-g .gos-general-infotab-container { height: 100%; color: aliceblue; }
 
 .gos-general-infotab-g .gos-general-infotab-container .gos-StationName { line-height: 1.2; }
 
@@ -193,35 +189,43 @@ circle:hover { fill: #5e5ee5; stroke-width: 18; }
 
 @media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .gos-StationName p { font-size: 40px; } }
 
-.gos-general-infotab-g .gos-general-infotab-container .PPMlabel { font-weight: 100; left: 20px; }
-
-.gos-general-infotab-g .gos-general-infotab-container .apportoIdrico { border-top: 2px solid; }
-
-.gos-general-infotab-g .gos-general-infotab-container .apportoIdrico .hydro-label-heading h2 { font-family: Chillax-variable; font-weight: 500; font-size: 20px; }
-
-.gos-general-infotab-g .gos-general-infotab-container .apportoIdrico .hydro-label-heading h4 { font-family: Chillax-variable; font-weight: 200; font-size: 15px; }
-
-.gos-general-infotab-g .gos-general-infotab-container .apportoIdrico .apportoIdrico-inner { border-radius: 10px; border: 1px solid; padding: 10px; background-color: rgba(50, 50, 50, 0.2); }
-
-.gos-general-infotab-g .gos-general-infotab-container .apportoIdrico .apportoIdrico-inner h3 { font-weight: 200; font-size: 15px; }
-
-.gos-general-infotab-g .gos-general-infotab-container .LightLabel { display: flex; flex-direction: row; align-content: center; flex-wrap: wrap; justify-content: start; align-items: flex-start; border-top: 2px solid; margin-top: 10px; padding-top: 10px; }
-
-.gos-general-infotab-g .gos-general-infotab-container .LightLabel .other_infos { font-family: Chillax-variable; }
-
 .gos-general-infotab-g .gos-general-infotab-container .content { webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); background-color: rgba(225, 225, 225, 0.2); border-radius: 10px; }
 
-.gos-general-infotab-g .gos-general-infotab-container .content .info-inner { width: 100%; }
+.gos-general-infotab-g .gos-general-infotab-container .content .PPMlabel { font-weight: 100; left: 20px; }
 
-.gos-general-infotab-g .gos-general-infotab-container .content .info-inner .label h2 { font-family: Chillax-variable; font-weight: 500; font-size: 20px; }
+.gos-general-infotab-g .gos-general-infotab-container .content .PPMlabel img { width: 90%; height: 50px; object-fit: contain; object-position: bottom; flex-basis: fit-content; }
 
-.gos-general-infotab-g .gos-general-infotab-container .content .info-inner .value { font-size: 40px; line-height: 0.9; font-family: Oswald; font-weight: 100; }
+@media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .content .PPMlabel img { width: 100%; height: 80px; } }
 
-@media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .content .info-inner .value { font-size: 60px; } }
+.gos-general-infotab-g .gos-general-infotab-container .content .PPMlabel .label h2 { font-family: Chillax-variable; font-weight: 400; font-size: 20px; }
 
-.gos-general-infotab-g .gos-general-infotab-container .content .info-inner .udm { font-size: 20px; font-family: Chillax-variable; font-weight: 200; padding-left: 10px; }
+.gos-general-infotab-g .gos-general-infotab-container .content .PPMlabel .label .value .info { font-family: Oswald; font-weight: 200; font-size: 40px; }
 
-.gos-general-infotab-g .gos-general-infotab-container .content .info-inner .info-heading { font-size: 20px; }
+.gos-general-infotab-g .gos-general-infotab-container .content .apportoIdrico { border-top: 1px solid; }
+
+.gos-general-infotab-g .gos-general-infotab-container .content .apportoIdrico img { width: 90%; height: 50px; object-fit: contain; object-position: bottom; flex-basis: fit-content; }
+
+@media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .content .apportoIdrico img { width: 100%; height: 80px; } }
+
+.gos-general-infotab-g .gos-general-infotab-container .content .apportoIdrico .hydro-label-heading h2 { font-family: Chillax-variable; font-weight: 500; font-size: 20px; }
+
+.gos-general-infotab-g .gos-general-infotab-container .content .apportoIdrico .hydro-label-heading h4 { font-family: Chillax-variable; font-weight: 200; font-size: 15px; }
+
+.gos-general-infotab-g .gos-general-infotab-container .content .apportoIdrico .apportoIdrico-inner { border-radius: 10px; border: 1px solid; padding: 10px; background-color: rgba(50, 50, 50, 0.2); }
+
+.gos-general-infotab-g .gos-general-infotab-container .content .apportoIdrico .apportoIdrico-inner h3 { font-weight: 200; font-size: 15px; }
+
+.gos-general-infotab-g .gos-general-infotab-container .content .LightLabel { display: flex; flex-direction: row; align-content: center; flex-wrap: wrap; justify-content: start; align-items: flex-start; border-top: 1px solid; margin-top: 10px; padding-top: 10px; }
+
+.gos-general-infotab-g .gos-general-infotab-container .content .LightLabel .icon { width: 40px; padding-right: 10px; }
+
+@media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .content .LightLabel .icon { width: 100%; height: 80px; } }
+
+.gos-general-infotab-g .gos-general-infotab-container .content .LightLabel h2 { font-family: Chillax-variable; font-weight: 400; font-size: 20px; }
+
+.gos-general-infotab-g .gos-general-infotab-container .content .LightLabel .label .value { font-family: Oswald; font-weight: 200; font-size: 40px; }
+
+.gos-general-infotab-g .gos-general-infotab-container .content .LightLabel .label .other_infos { font-family: Chillax-variable; }
 
 body { margin: 0; padding: 0; overflow: hidden; /* position: relative; top:$grid-gutter-width*5; */ }
 
