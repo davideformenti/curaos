@@ -1,4 +1,4 @@
-$(window).on("scroll", function() {
+/* $(window).on("scroll", function() {
     var scrollPos = $(window).scrollTop();
     if (scrollPos <= 0) {
         $('.gos-header').addClass('top-of-page');
@@ -7,4 +7,13 @@ $(window).on("scroll", function() {
         $('.gos-header').removeClass('top-of-page');
         $('.gos-header').addClass('blurred');
     }
-});
+}); */
+
+function show() {
+    var x = document.getElementById("gos-info-tab");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }

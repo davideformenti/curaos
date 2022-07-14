@@ -16,8 +16,13 @@
 
 
   </head>
-<div class="offcanvas cos-sidebar offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-  <div class="offcanvas-header cos-sidebar-header d-none">
+
+
+
+<div class="offcanvas cos-sidebar offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+  <div class="offcanvas-header cos-sidebar-header">
+    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body cos-sidebar-body">
 
@@ -176,23 +181,8 @@
 
     </div>
    
-   
 
-
-
-
-
-
-
-
-
-
-
-
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-
-
-    <footer class="gos-footer" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+    <footer class="gos-footer">
 
   <div class="gos-footer-container d-flex h-100">
     
@@ -204,8 +194,7 @@
 
         
         <div class="gos-footer-header col-12 text-center">
-          
-          <h2>
+          <h2 class="d-inline"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
             cura O.S.
           </h2>
         </div>
@@ -243,14 +232,12 @@
   </div>
 </div>
 
-
-
-
-
   <body>
 
       
     
+<script src="/curaos/assets/JS/main.js"></script>
+
 <div id="map"></div>
 <style>
 
@@ -276,8 +263,8 @@
           <span id="municipio" class="info"></span>
         </div>
       </div>
-      <div class="info-inner d-flex flex-column align-self-start col-6">
-        <div class="col-12">
+      <div class="info-inner d-flex align-self-start col-12">
+        <div class="col-6">
           <h2 class ="">Inquinanti nel distretto:</h2>
         </div>
         <div class="col-6">
@@ -307,6 +294,16 @@
 
 </div>
 
+<div>
+  <h2 id="swap_giardinopersonale" onclick="show()">
+    PROVA
+  </h2>
+</div>
+<div>
+  <h2 id="swap_giardinopersonale" onclick="show()">
+    vai al giardino personale
+  </h2>
+</div>
 
 <!-- Make sure you put this AFTER Leaflet's CSS -->
 
@@ -341,7 +338,7 @@
     -->
   </body>
   
-  <footer class="gos-footer" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+  <footer class="gos-footer">
 
   <div class="gos-footer-container d-flex h-100">
     
@@ -353,8 +350,7 @@
 
         
         <div class="gos-footer-header col-12 text-center">
-          
-          <h2>
+          <h2 class="d-inline"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
             cura O.S.
           </h2>
         </div>

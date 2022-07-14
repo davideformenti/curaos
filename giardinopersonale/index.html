@@ -16,8 +16,13 @@
 
 
   </head>
-<div class="offcanvas cos-sidebar offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-  <div class="offcanvas-header cos-sidebar-header d-none">
+
+
+
+<div class="offcanvas cos-sidebar offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+  <div class="offcanvas-header cos-sidebar-header">
+    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body cos-sidebar-body">
 
@@ -176,23 +181,8 @@
 
     </div>
    
-   
 
-
-
-
-
-
-
-
-
-
-
-
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-
-
-    <footer class="gos-footer" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+    <footer class="gos-footer">
 
   <div class="gos-footer-container d-flex h-100">
     
@@ -204,8 +194,7 @@
 
         
         <div class="gos-footer-header col-12 text-center">
-          
-          <h2>
+          <h2 class="d-inline"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
             cura O.S.
           </h2>
         </div>
@@ -243,10 +232,6 @@
   </div>
 </div>
 
-
-
-
-
   <body>
 
       
@@ -262,6 +247,11 @@
 
   <div id="gos-info-tab" class="gos-general-infotab-g gos-tab">
         <div id="tooltip" class="gos-general-infotab-container d-flex flex-column align-items-center flex-wrap-reverse flex-lg-wrap justify-content-lg-around align-content-lg-center flex-lg-row-reverse align-items-lg-end">
+          
+          <div class="col-9 d-lg-block d-none py-4 text-end d-flex">
+            <a class="swap-link" href="/curaos/parcourbano">Vai al parco urbano</a>
+          </div>
+          
           <div class="gos-StationName pt-4 py-lg-0">           
             <div class="d-flex px-3 flex-column align-items-start col-12">
                 <div class="d-flex w-100 justify-content-between align-items-end">
@@ -353,10 +343,13 @@
 
 
         </div>
+
+        <div class="col-12 d-lg-none pt-4 d-flex flex-row-reverse justify-content-center align-items-end">
+          <a class="swap-link" href="/curaos/parcourbano">Vai al parco urbano</a>
+        </div>
+
       </div>    
-      <div class="col-12 pt-4 d-flex flex-row-reverse justify-content-center align-items-end">
-        <a class="swap-link" href="/curaos/parcourbano">Vai al parco urbano</a>
-      </div>
+      
     </div> 
     
     
@@ -405,7 +398,7 @@
     -->
   </body>
   
-  <footer class="gos-footer" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+  <footer class="gos-footer">
 
   <div class="gos-footer-container d-flex h-100">
     
@@ -417,8 +410,7 @@
 
         
         <div class="gos-footer-header col-12 text-center">
-          
-          <h2>
+          <h2 class="d-inline"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
             cura O.S.
           </h2>
         </div>
