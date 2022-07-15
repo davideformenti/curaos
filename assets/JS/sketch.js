@@ -435,8 +435,8 @@ for (let i = n; i > 0; i--) {
   blob(size, water_pg.width/2, -water_pg.height/6, k, t - i * step, noisiness);
   }
   else{
-    blob(size, water_pg.width*1.3, water_pg.height/2, k, t - i * step, noisiness);
-    blob(size, -water_pg.width/3, water_pg.height/4, k, t - i * step, noisiness);
+    blob(size, water_pg.width, water_pg.height/2, k, t - i * step, noisiness);
+    blob(size, -water_pg.width/4, water_pg.height/4, k, t - i * step, noisiness);
   }
 
 }

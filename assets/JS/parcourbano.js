@@ -105,7 +105,7 @@ hoveredStateId = null;
         // Overlay d3 on the map
         var svg = d3.select(canvas).append("svg");
         var m = svg.append("g").attr("class", "municipi");
-       var  g = svg.append("g").attr("class", "gruppetto");
+       var  g = svg.append("g").attr("class", "gruppetto_sensori");
        var p = svg.append("g").attr("class", "gruppetto");
        
         var transform = d3.geoTransform({point:projectPoint});
@@ -148,7 +148,7 @@ drawstazioni(stazioni)
         //////////////
 
         // Draw GeoJSON data with d3
-        var circles;
+        var sensori;
         var stazioni;
         var municipi;
 
@@ -165,15 +165,20 @@ drawstazioni(stazioni)
             console.log("draw data");
 
             // Add circles
-            circles = g.selectAll("circle")
+            sensori = g.selectAll("circle")
                 .data(data.features)
                 .enter()
-                .append("circle")
-                    .attr("r", 10).attr("fill","#ffd056")
+                .append("image")
+                    .attr("xlink:href", "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNzUycHQiIGhlaWdodD0iNzUycHQiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDc1MiA3NTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8Zz4KICA8cGF0aCBkPSJtNzUyIDM3NmMwIDEzNC4zMy03MS42NjQgMjU4LjQ2LTE4OCAzMjUuNjItMTE2LjM0IDY3LjE2OC0yNTkuNjYgNjcuMTY4LTM3NiAwLTExNi4zNC02Ny4xNjQtMTg4LTE5MS4yOS0xODgtMzI1LjYyczcxLjY2NC0yNTguNDYgMTg4LTMyNS42MmMxMTYuMzQtNjcuMTY4IDI1OS42Ni02Ny4xNjggMzc2IDAgMTE2LjM0IDY3LjE2NCAxODggMTkxLjI5IDE4OCAzMjUuNjIiIGZpbGw9IiM3MGQyNTgiLz4KICA8cGF0aCBkPSJtMjM5LjYzIDU5Ny4wMnM4NC41MzUtNTIuMjcgMTkyLjMtOTUuNTA0YzEwNy43Ny00My4yMzQgMTU4LjEtMTQ5LjM4IDEzNi4xNi0zNDYuNTQgMCAwLTg0LjUzNSA0Mi41OTQtMjA2LjUxIDYzLjg5MS0xMjEuOTYgMjEuMjk3LTIzOC43NyAxMzYuMTUtMTUzLjU4IDM0Mi42NiAwIDAgNjcuNzU4LTE4My45MiAyMjMuMjctMjM2LjE5IDAgMC0xMjQuNTQgODEuODc5LTE5MS42NiAyNzEuNjh6IiBmaWxsPSIjZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz4KIDwvZz4KPC9zdmc+Cg==")
+                    
+                    .attr("width", 20)
+                    .attr("height", 20)
+                    .attr("class","sensore")
                     .on("click", function(d) {
                         alert(d.properties.name);
                     });
-
+                    
+              
             // Call the update function
             update();
 
@@ -183,8 +188,8 @@ drawstazioni(stazioni)
             map.on("moveend",   update);
 
             function update() {
-            circles.attr("cx", function(d) { return project(d.geometry.coordinates).x })
-                   .attr("cy", function(d) { return project(d.geometry.coordinates).y });
+            sensori.attr("x", function(d) { return project(d.geometry.coordinates).x })
+                   .attr("y", function(d) { return project(d.geometry.coordinates).y });
         }
 
         }

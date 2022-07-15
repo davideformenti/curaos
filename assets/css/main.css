@@ -153,7 +153,9 @@ circle { stroke-width: 2; cursor: pointer; transition: 0.5s fill, 0.5s stroke-wi
 
 circle:hover { fill: #5e5ee5; stroke-width: 18; }
 
-#swap_giardinopersonale { position: absolute; bottom: 80px; }
+#show_infos { position: absolute; bottom: 80px; left: 20px; text-decoration: none; color: white; border: 1px solid; border-radius: 10px; padding: 6.6666666667px; font-size: 13.3333333333px; font-family: Chillax-variable; backdrop-filter: blur(2px) contrast(60%); -webkit-backdrop-filter: blur(2px) contrast(60%); background-color: rgba(225, 225, 225, 0.2); border-radius: 10px; }
+
+#swap_giardinopersonale { position: absolute; bottom: 80px; right: 20px; text-decoration: none; color: white; border: 1px solid; border-radius: 10px; padding: 6.6666666667px; font-size: 13.3333333333px; font-family: Chillax-variable; backdrop-filter: blur(2px) contrast(60%); -webkit-backdrop-filter: blur(2px) contrast(60%); background-color: rgba(225, 225, 225, 0.2); border-radius: 10px; }
 
 .gos-general-infotab { display: fixed; background-color: transparent; width: 100vw; height: 30vh; position: absolute; top: 0; left: 0; webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); background-color: rgba(255, 255, 255, 0.5); border-radius: 5px; }
 
@@ -165,7 +167,7 @@ circle:hover { fill: #5e5ee5; stroke-width: 18; }
 
 .gos-general-infotab .gos-general-infotab-container .info-inner .info { font-family: work sans; font-size: 15px; }
 
-.swap-link { text-decoration: none; color: white; border: 1px solid; border-radius: 10px; padding: 6.6666666667px; font-size: 13.3333333333px; font-family: Chillax-variable; }
+.swap-link { text-decoration: none; color: white; border: 1px solid; border-radius: 10px; padding: 6.6666666667px; font-size: 13.3333333333px; font-family: Chillax-variable; backdrop-filter: blur(2px) contrast(60%); -webkit-backdrop-filter: blur(2px) contrast(60%); background-color: rgba(225, 225, 225, 0.2); border-radius: 10px; }
 
 #defaultCanvas0 { overflow: hidden; }
 
