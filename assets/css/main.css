@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px ) !default; */
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* @font-face { font-family: 'Outward-borders'; src: url('/assets/webfonts/outward-borders-webfont.eot'); src: url('/assets/webfonts/outward-borders-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/webfonts/outward-borders-webfont.woff2') format('woff2'), url('/assets/webfonts/outward-borders-webfont.woff') format('woff'), url('/assets/webfonts/outward-borders-webfont.ttf') format('truetype'), url('/assets/webfonts/outward-borders-webfont.svg#outwardborders') format('svg'); font-weight: bold; font-style: normal; } */
 /*  font-family: 'Oswald', sans-serif;
@@ -45,14 +46,55 @@ font-family: 'Work Sans', sans-serif; */
 
 @font-face { font-family: 'Chillax-Bold'; src: url("../fonts/chillax/Chillax-Bold.woff2") format("woff2"), url("../fonts/chillax/Chillax-Bold.woff") format("woff"), url("../fonts/chillax/Chillax-Bold.ttf") format("truetype"); font-weight: 700; font-display: swap; font-style: normal; }
 
-.ws-thin { font-family: Work Sans; font-weight: 100; }
+.clx { font-family: Chillax-variable; }
 
-.ws-reg { font-family: Work Sans; font-weight: 300; }
+.clx-brand { font-size: 20px; font-family: Chillax-variable; font-weight: 100; line-height: .9; }
 
-.ws-med { font-family: Work Sans; font-weight: 500; }
+@media (min-width: 1080px) { .clx-brand { font-size: 20px; } }
 
-.ws-bold { font-family: Work Sans; font-weight: 700; }
+@media (min-width: 1400px) { .clx-brand { font-size: 40px; } }
 
+.clx-h2 { font-size: 30px; font-family: Chillax-variable; font-weight: 500; line-height: .9; }
+
+@media (min-width: 1080px) { .clx-h2 { font-size: 50px; } }
+
+@media (min-width: 1400px) { .clx-h2 { font-size: 70px; } }
+
+.clx-h4 { font-size: 20px; font-family: Chillax-variable; font-weight: 500; line-height: .9; }
+
+@media (min-width: 1080px) { .clx-h4 { font-size: 30px; } }
+
+@media (min-width: 1400px) { .clx-h4 { font-size: 40px; } }
+
+.clx-p { font-size: 25px; font-family: Work Sans; font-weight: 300; line-height: .98; }
+
+.clx-link { text-decoration: none; font-size: 20px; font-family: Chillax-variable; font-weight: 500; line-height: .95; max-width: fit-content; }
+
+.clx-link:hover { padding-bottom: 10px; border-bottom: 2px solid; }
+
+.clx-button { text-decoration: none; font-size: 20px; font-family: Chillax-variable; font-weight: 500; line-height: .95; border: 2px solid; padding: 15px; border-radius: 20px; color: black; }
+
+.clx-button:hover { background-color: #1c5252; color: white; }
+
+.clx-tooltip-h2 { font-family: Chillax-variable; font-weight: 500; font-size: 20px; }
+
+@media (min-width: 1080px) { .clx-tooltip-h2 { font-size: 30px; } }
+
+@media (min-width: 1400px) { .clx-tooltip-h2 { font-size: 35px; } }
+
+.ws-tooltip-p { font-family: Work Sans; font-size: 0px, 75; }
+
+@media (min-width: 1400px) { .ws-tooltip-p { font-size: 20px; } }
+
+@media (min-width: 1400px) { .clx-tooltip-value { font-size: 30px; } }
+
+.clx-tooltip-h3 { font-family: Chillax-variable; font-weight: 500; font-size: 15px; }
+
+@media (min-width: 1080px) { .clx-tooltip-h3 { font-size: 25px; } }
+
+@media (min-width: 1400px) { .clx-tooltip-h3 { font-size: 30px; } }
+
+/* $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px ) !default; */
 #cos-hamburger { position: inherit; width: 100%; height: 20%; color: #E6F47B; }
 
 .gos-footer { width: 100vw; height: 60px; position: absolute; bottom: 0px; border-top: 2px solid white; backdrop-filter: blur(2px) contrast(60%); -webkit-backdrop-filter: blur(2px) contrast(60%); background-color: rgba(27, 35, 35, 0.219); }
@@ -61,6 +103,7 @@ font-family: 'Work Sans', sans-serif; */
 
 .gos-footer .gos-footer-container .gos-footer-inner a { text-decoration: none; color: black; font-size: 20px; font-family: Chillax-variable; font-weight: 200; }
 
+/* $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px ) !default; */
 .gos-header { background-color: #E6F47B; height: 100px; width: 100vw; transition: all 0.3s; }
 
 .gos-header .gos-sidebar-link-logo h1 { color: #093824; font-family: work sans; font-size: 20px; font-weight: 600 !important; }
@@ -87,7 +130,7 @@ font-family: 'Work Sans', sans-serif; */
 
 @media (min-width: 768px) { .gos-header .offcanvas-end .menu-items a { font-size: 52px; } }
 
-@media (min-width: 992px) { .gos-header .offcanvas-end .menu-items a { font-size: 54px; } }
+@media (min-width: 1080px) { .gos-header .offcanvas-end .menu-items a { font-size: 54px; } }
 
 .top-of-page { background-color: #6F9283; height: 100px; width: 100vw; }
 
@@ -103,9 +146,12 @@ font-family: 'Work Sans', sans-serif; */
 
 .change .bar3 { -webkit-transform: rotate(45deg) translate(-8px, -8px); transform: rotate(45deg) translate(-8px, -8px); }
 
+/* $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px ) !default; */
 .cos-hamburger { border-radius: 10px; padding: 10px; webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); background-color: rgba(225, 225, 225, 0.2); border-radius: 10px; }
 
-.cos-sidebar { background-color: #d9d9d9; backdrop-filter: blur(10px); width: 100vw; height: 90vh; }
+.cos-sidebar { background-color: #d9d9d9; backdrop-filter: blur(10px); width: 100vw; height: 100vh; }
+
+.cos-sidebar .cos-sidebar-header { position: fixed; right: 20px; top: 15px; border: 2px solid; border-radius: 100px; padding: 10px; }
 
 .cos-sidebar .cos-sidebar-body { padding: 0px; }
 
@@ -113,15 +159,15 @@ font-family: 'Work Sans', sans-serif; */
 
 .cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item { background-color: transparent; }
 
-.cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-header h2 { background-color: transparent; color: #093824; font-family: Chillax-variable; font-weight: 700; font-size: 15px; padding: 10px; border-bottom: 2px solid; }
+.cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-header h2 { background-color: transparent; color: #093824; font-family: Chillax-variable; font-weight: 700; font-size: 15px; padding: 25px; border-top: 2px solid; }
 
 .cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body { background-color: transparent; overflow: scroll; height: 70vh; }
 
-@media (min-width: 992px) { .cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body { height: 73vh; } }
+@media (min-width: 1080px) { .cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body { height: 73vh; } }
 
 .cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body h4 { font-family: Chillax-variable; font-size: 20px; font-weight: 400; }
 
-@media (min-width: 992px) { .cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body h4 { font-size: 40px; } }
+@media (min-width: 1080px) { .cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body h4 { font-size: 40px; } }
 
 .cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body .body-inner h2 { font-family: Chillax-variable; font-size: 25px; font-weight: 400; }
 
@@ -131,20 +177,40 @@ font-family: 'Work Sans', sans-serif; */
 
 ::-webkit-scrollbar { display: none; }
 
-.gos-section-two-columns { background-position: center; background-size: cover; background-repeat: no-repeat; height: 100vh; /* border-bottom: 4px solid $tertiary; */ /* @include media-breakpoint-up(lg) { } */ }
+/* $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px ) !default; */
+/* $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px ) !default; */
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+/* Declare heights because of positioning of img element */
+.carousel .carousel-inner .carousel-item { height: 100vh; }
 
-.gos-section-two-columns .gos-two-column-container { font-family: Oswald; }
+.carousel .carousel-inner .carousel-item img { position: absolute; top: 0; left: 0; min-width: 100%; height: 100vh; }
 
-.gos-section-two-columns .gos-two-column-container .two-columns-img { background-size: contain; background-repeat: no-repeat; background-position: 0 50px; }
+.carousel .carousel-inner .carousel-item .cos-carousel-container .carousel-text { width: 35%; z-index: 100; color: white; border-right: 2px solid; background-color: rgba(50, 50, 50, 0.1); backdrop-filter: blur(7px); }
 
-.gos-section-two-columns .gos-two-column-container .two-columns-header .two-columns-header-inner h3 { color: #6F9283; /* -webkit-text-stroke: 1px $secondary; stroke-width: 2px; */ font-size: 46px; font-weight: 400; line-height: 1; border-bottom: 4px solid #6F9283; }
+.carousel .carousel-inner .carousel-item .cos-carousel-container .carousel-text h1 { font-family: Chillax-variable; font-size: 100px; font-weight: 200; }
 
-.gos-section-two-columns .gos-two-column-container .two-columns-header .two-columns-header-inner p { color: #6F9283; font-family: work sans; }
+.carousel .carousel-inner .carousel-item .cos-carousel-container .carousel-text p { font-family: Chillax-variable; font-size: 25px; font-weight: 200; }
 
-.gos-section-a .gos-section-accordion-container { background-color: #EAF6FF; }
+.carousel .carousel-inner .carousel-item .cos-carousel-container .carousel-text a { color: white; text-decoration: none; }
 
-.gos-section-a .gos-section-accordion-container .gos-accordion-header h2 { font-size: 46px; font-weight: 400; color: #6F9283; line-height: 1; font-family: Oswald; border-bottom: 4px solid #6F9283; }
+/* $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px ) !default; */
+/* $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px ) !default; */
+.cos-section-image { height: 60vh; }
 
+/*  @import "customs"; @import "mixins"; .cos-section-container-hero-text{ margin-top: $grid-gutter-width*3; padding-top: $grid-gutter-width*7; padding-bottom: $grid-gutter-width*7; border-radius: 150px 0px 150px 0px; .cos-hero-text-header{ h2 { font-family: Chillax-variable; font-size: $grid-gutter-width*2; padding: $grid-gutter-width*3 $grid-gutter-width*15 ; color: white; } } .cos-hero-text-inner { p{ } } } */
+/* $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px ) !default; */
+/* $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px ) !default; */
+.cos-container-half-carousel { margin-top: 60px; }
+
+.cos-container-half-carousel .cos-section-hc-inner .cos-s-half-carousel .carousel-inner { border-radius: 105px 300px 0px 300px; }
+
+/* $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px ) !default; */
+/* $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px ) !default; */
+@media (min-width: 1400px) { .two-cols-container .two-cols-container-inner .two-cols-header { padding: 20px 120px; font-size: 70px; } }
+
+/* $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px ) !default; */
+/* $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px ) !default; */
 #map { top: 0; bottom: 0; height: 100vh; }
 
 svg { position: absolute; width: 100%; height: 100%; }
@@ -153,13 +219,13 @@ circle { stroke-width: 2; cursor: pointer; transition: 0.5s fill, 0.5s stroke-wi
 
 circle:hover { fill: #5e5ee5; stroke-width: 18; }
 
-#show_infos { position: absolute; bottom: 80px; left: 20px; text-decoration: none; color: white; border: 1px solid; border-radius: 10px; padding: 6.6666666667px; font-size: 13.3333333333px; font-family: Chillax-variable; backdrop-filter: blur(2px) contrast(60%); -webkit-backdrop-filter: blur(2px) contrast(60%); background-color: rgba(225, 225, 225, 0.2); border-radius: 10px; }
+#show_infos { position: absolute; bottom: 160px; right: 20px; text-decoration: none; color: white; border: 1px solid; border-radius: 10px; padding: 6.6666666667px; font-size: 13.3333333333px; font-family: Chillax-variable; backdrop-filter: blur(2px) contrast(60%); -webkit-backdrop-filter: blur(2px) contrast(60%); background-color: rgba(225, 225, 225, 0.2); border-radius: 10px; }
 
 #swap_giardinopersonale { position: absolute; bottom: 80px; right: 20px; text-decoration: none; color: white; border: 1px solid; border-radius: 10px; padding: 6.6666666667px; font-size: 13.3333333333px; font-family: Chillax-variable; backdrop-filter: blur(2px) contrast(60%); -webkit-backdrop-filter: blur(2px) contrast(60%); background-color: rgba(225, 225, 225, 0.2); border-radius: 10px; }
 
-.gos-general-infotab { display: fixed; background-color: transparent; width: 100vw; height: 30vh; position: absolute; top: 0; left: 0; webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); background-color: rgba(255, 255, 255, 0.5); border-radius: 5px; }
+.gos-general-infotab { display: fixed; background-color: transparent; width: 100vw; height: 50vh; position: absolute; top: 0; left: 0; webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); background-color: rgba(255, 255, 255, 0.5); border-radius: 5px; }
 
-@media (min-width: 992px) { .gos-general-infotab { width: 40vw; height: 60%; position: absolute; top: 0; left: 0; } }
+@media (min-width: 1080px) { .gos-general-infotab { width: 55vw; height: 100%; position: absolute; /* top:$grid-gutter-width; left:$grid-gutter-width ;  */ } }
 
 .gos-general-infotab .gos-general-infotab-container .info-inner { font-size: 15px; font-family: Chillax-variable; font-weight: 300; }
 
@@ -167,7 +233,11 @@ circle:hover { fill: #5e5ee5; stroke-width: 18; }
 
 .gos-general-infotab .gos-general-infotab-container .info-inner .info { font-family: work sans; font-size: 15px; }
 
-.swap-link { text-decoration: none; color: white; border: 1px solid; border-radius: 10px; padding: 6.6666666667px; font-size: 13.3333333333px; font-family: Chillax-variable; backdrop-filter: blur(2px) contrast(60%); -webkit-backdrop-filter: blur(2px) contrast(60%); background-color: rgba(225, 225, 225, 0.2); border-radius: 10px; }
+/* $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px ) !default; */
+/* $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px ) !default; */
+.swap-link { position: absolute; bottom: 80px; right: 20px; text-decoration: none; color: white; border: 1px solid; border-radius: 10px; padding: 6.6666666667px; font-size: 13.3333333333px; font-family: Chillax-variable; backdrop-filter: blur(2px) contrast(60%); -webkit-backdrop-filter: blur(2px) contrast(60%); background-color: rgba(225, 225, 225, 0.2); border-radius: 10px; }
+
+.swap-link-mobile { text-decoration: none; color: white; border: 1px solid; border-radius: 10px; padding: 6.6666666667px; font-size: 13.3333333333px; font-family: Chillax-variable; backdrop-filter: blur(2px) contrast(60%); -webkit-backdrop-filter: blur(2px) contrast(60%); background-color: rgba(225, 225, 225, 0.2); border-radius: 10px; }
 
 #defaultCanvas0 { overflow: hidden; }
 
@@ -175,7 +245,7 @@ circle:hover { fill: #5e5ee5; stroke-width: 18; }
 
 .gos-general-infotab-g { display: fixed; background-color: transparent; width: 100vw; position: absolute; top: 0; left: 0; }
 
-@media (min-width: 992px) { .gos-general-infotab-g { display: fixed; background-color: transparent; width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; } }
+@media (min-width: 1080px) { .gos-general-infotab-g { display: fixed; background-color: transparent; width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; } }
 
 .gos-general-infotab-g .gos-general-infotab-container { height: 100%; color: aliceblue; }
 
@@ -183,15 +253,15 @@ circle:hover { fill: #5e5ee5; stroke-width: 18; }
 
 .gos-general-infotab-g .gos-general-infotab-container .gos-StationName .date { font-size: 20px; font-family: Chillax-Variable; font-weight: 300; }
 
-@media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .gos-StationName .date { font-size: 40px; } }
+@media (min-width: 1080px) { .gos-general-infotab-g .gos-general-infotab-container .gos-StationName .date { font-size: 40px; } }
 
 .gos-general-infotab-g .gos-general-infotab-container .gos-StationName h2 { font-size: 30px; font-family: Chillax-Variable; font-weight: 400; text-align: right; line-height: .75; padding-bottom: 20px; }
 
-@media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .gos-StationName h2 { font-size: 80px; } }
+@media (min-width: 1080px) { .gos-general-infotab-g .gos-general-infotab-container .gos-StationName h2 { font-size: 80px; } }
 
 .gos-general-infotab-g .gos-general-infotab-container .gos-StationName p { font-size: 20px; font-family: Chillax-Variable; font-weight: 300; }
 
-@media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .gos-StationName p { font-size: 40px; } }
+@media (min-width: 1080px) { .gos-general-infotab-g .gos-general-infotab-container .gos-StationName p { font-size: 40px; } }
 
 .gos-general-infotab-g .gos-general-infotab-container .content { backdrop-filter: blur(2px) contrast(60%); -webkit-backdrop-filter: blur(2px) contrast(60%); background-color: rgba(225, 225, 225, 0.2); border-radius: 10px; }
 
@@ -199,7 +269,7 @@ circle:hover { fill: #5e5ee5; stroke-width: 18; }
 
 .gos-general-infotab-g .gos-general-infotab-container .content .PPMlabel .icon { width: 40px; padding-right: 10px; }
 
-@media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .content .PPMlabel .icon { width: 60px; padding-right: 10px; } }
+@media (min-width: 1080px) { .gos-general-infotab-g .gos-general-infotab-container .content .PPMlabel .icon { width: 60px; padding-right: 10px; } }
 
 .gos-general-infotab-g .gos-general-infotab-container .content .PPMlabel .label h2 { font-family: Chillax-variable; font-weight: 400; font-size: 20px; }
 
@@ -211,7 +281,7 @@ circle:hover { fill: #5e5ee5; stroke-width: 18; }
 
 .gos-general-infotab-g .gos-general-infotab-container .content .apportoIdrico .icon { width: 40px; padding-right: 10px; }
 
-@media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .content .apportoIdrico .icon { width: 60px; padding-right: 10px; } }
+@media (min-width: 1080px) { .gos-general-infotab-g .gos-general-infotab-container .content .apportoIdrico .icon { width: 60px; padding-right: 10px; } }
 
 .gos-general-infotab-g .gos-general-infotab-container .content .apportoIdrico .hydro-label-heading h2 { font-family: Chillax-variable; font-weight: 400; font-size: 20px; }
 
@@ -231,7 +301,7 @@ circle:hover { fill: #5e5ee5; stroke-width: 18; }
 
 .gos-general-infotab-g .gos-general-infotab-container .content .LightLabel .icon { width: 40px; padding-right: 10px; }
 
-@media (min-width: 992px) { .gos-general-infotab-g .gos-general-infotab-container .content .LightLabel .icon { width: 60px; padding-right: 10px; } }
+@media (min-width: 1080px) { .gos-general-infotab-g .gos-general-infotab-container .content .LightLabel .icon { width: 60px; padding-right: 10px; } }
 
 .gos-general-infotab-g .gos-general-infotab-container .content .LightLabel h2 { font-family: Chillax-variable; font-weight: 400; font-size: 20px; }
 
@@ -239,6 +309,74 @@ circle:hover { fill: #5e5ee5; stroke-width: 18; }
 
 .gos-general-infotab-g .gos-general-infotab-container .content .LightLabel .label .other_infos { font-family: Chillax-variable; font-weight: 200; font-size: 15px; }
 
-body { margin: 0; padding: 0; overflow: hidden; /* position: relative; top:$grid-gutter-width*5; */ }
+.about-section { padding-top: 10rem; background: white; }
+
+.about-section p { margin-bottom: 5rem; }
+
+#mainNav { height: 4.5rem; background-color: #1c5252; }
+
+#mainNav .navbar-toggler { font-size: 80%; padding: 0.75rem; color: #093824; }
+
+#mainNav .navbar-toggler:focus { outline: none; }
+
+#mainNav .navbar-brand { color: white; padding: 0.9rem 0; }
+
+#mainNav .navbar-nav .nav-item { font-family: Chillax-variable; }
+
+#mainNav .navbar-nav .nav-item:hover { outline: none; background-color: transparent; }
+
+#mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus { outline: none; background-color: transparent; }
+
+#mainNav .navbar-nav.navbar-shrink { background-color: rgba(28, 82, 82, 0.482); backdrop-filter: blur(5px); }
+
+@media (min-width: 1080px) { #mainNav { padding-top: 0; padding-bottom: 0; border-bottom: none; background-color: rgba(200, 200, 200, 0); transition: background-color 0.5s ease-in-out; } #mainNav .navbar-brand { padding: 0.5rem 0; color: rgba(255, 255, 255, 0.5); } #mainNav .nav-link { transition: none; padding: 2rem 1.5rem; color: rgba(255, 255, 255, 0.5); } #mainNav .nav-link:hover { color: rgba(255, 255, 255, 0.75); } #mainNav .nav-link:active { color: white; } #mainNav.navbar-shrink { background-color: rgba(28, 82, 82, 0.482); backdrop-filter: blur(5px); } #mainNav.navbar-shrink .navbar-brand { color: white; } #mainNav.navbar-shrink .nav-link { color: white; padding: 1.5rem 1.5rem 1.25rem; border-bottom: 0.25rem solid transparent; } #mainNav.navbar-shrink .nav-link:hover { color: #093824; } #mainNav.navbar-shrink .nav-link:active { color: black; } #mainNav.navbar-shrink .nav-link.active { color: #093824; outline: none; border-bottom: 0.25rem solid #093824; } }
+
+.top-of-page { background-color: #6F9283; height: 100px; width: 100vw; }
+
+.blurred { webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+
+.masthead { position: relative; width: 100%; height: auto; min-height: 35rem; padding: 15rem 0; background-position: center; background-repeat: no-repeat; background-attachment: scroll; background-size: cover; }
+
+.masthead h1 { font-family: Chillax-variable; font-weight: 200; font-size: 2.5rem; line-height: 2.5rem; letter-spacing: 0.8rem; -webkit-text-fill-color: white; background-clip: text; }
+
+.masthead h2 { max-width: 20rem; font-size: 1rem; }
+
+@media (min-width: 768px) { .masthead h1 { font-size: 4rem; line-height: 4rem; } }
+
+@media (min-width: 1080px) { .masthead { height: 100vh; padding: 0; } .masthead h1 { font-size: 6.5rem; line-height: 6.5rem; letter-spacing: 0.8rem; } .masthead h2 { max-width: 30rem; font-size: 1.25rem; } }
+
+/* $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px ) !default; */
+/* $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px ) !default; */
+.cos-section-container-hero-text { margin-top: 60px; padding-top: 20px; padding-bottom: 20px; margin-bottom: 60px; }
+
+@media (min-width: 1080px) { .cos-section-container-hero-text { margin-top: 60px; padding-top: 140px; padding-bottom: 140px; /*         border-radius: 150px 0px 150px 0px; */ } }
+
+.cos-section-container-hero-text .cos-hero-text-header h2 { font-family: Chillax-variable; font-size: 20px; padding: 200px 20px; color: white; }
+
+@media (min-width: 1080px) { .cos-section-container-hero-text .cos-hero-text-header h2 { font-size: 30px; padding: 60px 300px; } }
+
+.data-section { background-color: rgba(28, 82, 82, 0.482); padding-top: 10rem; }
+
+.data-section .img-fluid { max-width: 60%; }
+
+.data-section h4 { font-size: 15px; }
+
+.footer { background-color: rgba(28, 82, 82, 0.482); }
+
+.footer .footer-list { list-style-type: none; text-align: left; color: black; text-align: center; }
+
+@media (min-width: 768px) { .footer .footer-list { text-align: right; } }
+
+.footer .footer-list .footer-item { text-decoration: none; color: black; font-family: Chillax-variable; font-size: 15px; }
+
+.gs-steps-section { background-color: #1c5252; padding: 2rem 0; }
+
+.gs-steps-section .featured-text { padding: 2rem; }
+
+@media (min-width: 1080px) { .gs-steps-section .featured-text { padding: 0 0 0 2rem; border-left: 0.5rem solid #093824; } }
+
+@media (min-width: 1080px) { .gs-steps-section .project-text hr { border-color: #093824; border-width: 0.25rem; width: 30%; } }
+
+body { margin: 0; padding: 0; /* position: relative; top:$grid-gutter-width*5; */ }
 
 /*# sourceMappingURL=main.css.map */

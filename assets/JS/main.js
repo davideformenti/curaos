@@ -1,11 +1,11 @@
-/* $(window).on("scroll", function() {
+/*  $(window).on("scroll", function() {
     var scrollPos = $(window).scrollTop();
     if (scrollPos <= 0) {
-        $('.gos-header').addClass('top-of-page');
-        $('.gos-header').removeClass('blurred');
+        $('#mainNav').addClass('navbar-shrink');
+        $('#mainNav').removeClass('blurred');
     } else {
-        $('.gos-header').removeClass('top-of-page');
-        $('.gos-header').addClass('blurred');
+        $('#mainNav').removeClass('navbar-shrink');
+        $('#mainNav').addClass('blurred');
     }
 }); */
 
@@ -17,3 +17,69 @@ function show() {
       x.style.display = "none";
     }
   }
+
+  /*!
+* Start Bootstrap - Grayscale v7.0.5 (https://startbootstrap.com/theme/grayscale)
+* Copyright 2013-2022 Start Bootstrap
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
+*/
+//
+// Scripts
+// 
+
+window.addEventListener('DOMContentLoaded', event => {
+
+  // Navbar shrink function
+  var navbarShrink = function () {
+      const navbarCollapsible = document.body.querySelector('#mainNav');
+      const navbarBrand = document.body.querySelector('#navbarBrand');
+      if (!navbarCollapsible) {
+          return;
+      }
+      if (window.scrollY === 0) {
+          navbarCollapsible.classList.remove('navbar-shrink')
+      } else {
+
+          navbarCollapsible.classList.add('navbar-shrink')
+          navbarBrand.classList.remove('d-none')
+          navbarBrand.classList.add('d-block')
+        
+
+      }
+
+  };
+
+  // Shrink the navbar 
+  navbarShrink();
+console.log("ciao")
+  // Shrink the navbar when page is scrolled
+  document.addEventListener('scroll', navbarShrink);
+
+  // Activate Bootstrap scrollspy on the main nav element
+  const mainNav = document.body.querySelector('#mainNav');
+  if (mainNav) {
+      new bootstrap.ScrollSpy(document.body, {
+          target: '#mainNav',
+          offset: 100,
+      });
+  };
+
+  // Collapse responsive navbar when toggler is visible
+  const navbarToggler = document.body.querySelector('.navbar-toggler');
+  const responsiveNavItems = [].slice.call(
+      document.querySelectorAll('#navbarResponsive .nav-link')
+  );
+  responsiveNavItems.map(function (responsiveNavItem) {
+      responsiveNavItem.addEventListener('click', () => {
+          if (window.getComputedStyle(navbarToggler).display !== 'none') {
+              navbarToggler.click();
+          }
+      });
+  });
+
+});
+
+
+
+
+

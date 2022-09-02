@@ -59,6 +59,9 @@ map.addLayer({
 
 map.on('click', 'state-fills', (e) => {
   d3.select('#municipio').text(e.features[0].properties.MUNICIPIO);
+  var res = $('#municipio').text();
+  var prefisso ='../assets/img/graphs/Milano_inquinanti_2021/';
+  $('#municipio-graph').attr('src', prefisso + res + ".png")
   });
  
 // When the user moves their mouse over the state-fill layer, we'll update the
@@ -125,7 +128,7 @@ hoveredStateId = null;
 queue()
   .defer(d3.json, '../assets/data/geojson/municipiMilano.geojson')
 	.defer(d3.json, '../assets/data/geojson/stazionirilievoinquinanti.geojson')
-	.defer(d3.json, '../assets/data/geojson/zona9.geojson')
+	.defer(d3.json, '../assets/data/geojson/sentinelle_aggiornate.geojson')
 	
 	.await(makePlot);
 	
@@ -165,18 +168,35 @@ drawstazioni(stazioni)
             console.log("draw data");
 
             // Add circles
+/* 
+            .append("svg:image")
+            .attr("xlink:href", "img/icons/sun.svg")
+            .attr("width", 40)
+            .attr("height", 40)
+            .attr("x", 228)
+            .attr("y",53); */
             sensori = g.selectAll("circle")
                 .data(data.features)
                 .enter()
-                .append("image")
-                    .attr("xlink:href", "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNzUycHQiIGhlaWdodD0iNzUycHQiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDc1MiA3NTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8Zz4KICA8cGF0aCBkPSJtNzUyIDM3NmMwIDEzNC4zMy03MS42NjQgMjU4LjQ2LTE4OCAzMjUuNjItMTE2LjM0IDY3LjE2OC0yNTkuNjYgNjcuMTY4LTM3NiAwLTExNi4zNC02Ny4xNjQtMTg4LTE5MS4yOS0xODgtMzI1LjYyczcxLjY2NC0yNTguNDYgMTg4LTMyNS42MmMxMTYuMzQtNjcuMTY4IDI1OS42Ni02Ny4xNjggMzc2IDAgMTE2LjM0IDY3LjE2NCAxODggMTkxLjI5IDE4OCAzMjUuNjIiIGZpbGw9IiM3MGQyNTgiLz4KICA8cGF0aCBkPSJtMjM5LjYzIDU5Ny4wMnM4NC41MzUtNTIuMjcgMTkyLjMtOTUuNTA0YzEwNy43Ny00My4yMzQgMTU4LjEtMTQ5LjM4IDEzNi4xNi0zNDYuNTQgMCAwLTg0LjUzNSA0Mi41OTQtMjA2LjUxIDYzLjg5MS0xMjEuOTYgMjEuMjk3LTIzOC43NyAxMzYuMTUtMTUzLjU4IDM0Mi42NiAwIDAgNjcuNzU4LTE4My45MiAyMjMuMjctMjM2LjE5IDAgMC0xMjQuNTQgODEuODc5LTE5MS42NiAyNzEuNjh6IiBmaWxsPSIjZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz4KIDwvZz4KPC9zdmc+Cg==")
+                .append("svg:image")
+                
+                .attr("xlink:href", function (d){
+                  return d.properties.icon_path
+                })
                     
-                    .attr("width", 20)
-                    .attr("height", 20)
+                    .attr("width", 40)
+                    .attr("height", 40)
                     .attr("class","sensore")
+                    .attr("style","cursor:pointer")
                     .on("click", function(d) {
-                        alert(d.properties.name);
+                        d3.select('#NomeStazione').text(d.properties.Zona);
+                        d3.select('#SinossiQualitativa').text(d.properties.descrizione);
+                        d3.select('#StatoSentinella').text(d.properties.StatoSentinella);
+                        d3.select('#Inquinanti').text(d.properties.Inquinanti);
+                        d3.select('#ValoriInquinanti').text(d.properties.Valori_inquinanti);
+
                     });
+                    
                     
               
             // Call the update function
@@ -201,13 +221,19 @@ drawstazioni(stazioni)
             stazioni =p.selectAll("circle")
                 .data(data.features)
                 .enter()
-                .append("circle")
-                    .attr("r", 10).attr("fill","red")
-                    .on("click", function(d) {
+                .append("image")
+                .attr("xlink:href", "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNzUycHQiIGhlaWdodD0iNzUycHQiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDc1MiA3NTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8Zz4KICA8cGF0aCBkPSJtNzUyIDM3NmMwIDEzNC4zMy03MS42NjQgMjU4LjQ2LTE4OCAzMjUuNjItMTE2LjM0IDY3LjE2OC0yNTkuNjYgNjcuMTY4LTM3NiAwLTExNi4zNC02Ny4xNjQtMTg4LTE5MS4yOS0xODgtMzI1LjYyczcxLjY2NC0yNTguNDYgMTg4LTMyNS42MmMxMTYuMzQtNjcuMTY4IDI1OS42Ni02Ny4xNjggMzc2IDAgMTE2LjM0IDY3LjE2NCAxODggMTkxLjI5IDE4OCAzMjUuNjIiIGZpbGw9IiNmZmYiLz4KICA8cGF0aCBkPSJtMzc2IDE1MS4wNWMtMTI0LjA4IDAtMjI0Ljk1IDEwMC44Ny0yMjQuOTUgMjI0Ljk1czEwMC44NyAyMjQuOTUgMjI0Ljk1IDIyNC45NWMxMjQuMDggMC4wMDM5MDYgMjI0Ljk1LTEwMC44NyAyMjQuOTUtMjI0Ljk1cy0xMDAuODgtMjI0Ljk1LTIyNC45NS0yMjQuOTV6bTEwOC45MyAyMDQuNTktNDEuMjAzIDM3Ljg4N2MtMi4zNjcyIDIuMzY3Mi0zLjMxNjQgNS42ODM2LTIuODM5OCA4Ljk5NjFsMTEuMzYzIDUzLjk5MmMyLjgzOTggMTMuMjYyLTExLjM2NyAyMy4yMDctMjMuMjA3IDE2LjU3NGwtNDguMzAxLTI3LjQ2OWMtMi44Mzk4LTEuNDIxOS02LjYyODktMS40MjE5LTkuNDcyNyAwbC00OC4zMDUgMjcuNDY5Yy0xMS44NCA2LjYyODktMjUuNTc0LTMuNzg5MS0yMy4yMDctMTYuNTc0bDExLjM2Ny01NC40NjFjMC40NzI2Ni0zLjMxNjQtMC40NzI2Ni02LjYyODktMi44Mzk4LTguOTk2MWwtNDEuMjAzLTM3Ljg4N2MtOS45NDUzLTguOTk2MS00LjczNDQtMjUuNTc0IDguOTk2MS0yNi45OTJsNTUuNDEtNi4xNTYyYzMuMzE2NC0wLjQ3MjY2IDYuMTU2Mi0yLjM2NzIgNy41NzgxLTUuNjgzNmwyMi43My01MC42OGM1LjY4MzYtMTIuMzEyIDIyLjczLTEyLjMxMiAyOC40MTQgMGwyMy4yMDcgNTAuNjcyYzEuNDIxOSAyLjgzOTggNC4yNjE3IDUuMjEwOSA3LjU3ODEgNS42ODM2bDU1LjQxIDYuMTU2MmMxMy4yNTggMS40MjE5IDE4LjQ2OSAxNy45OTYgOC41MjM0IDI3LjQ2OXoiIGZpbGw9IiMzYjZhZjkiLz4KIDwvZz4KPC9zdmc+Cg==")
+                    
+                .attr("width", 30)
+                .attr("height", 30)
+                .attr("class","sensore_arpa_milano")
+
+/*                     .attr("r", 10).attr("fill","red")*/       
+                      .on("click", function(d) {
                         d3.select(this).style('fill', 'white'); 
                         d3.select('#location').text(d.properties.nome);
                         d3.select('#pollutants').text(d.properties.inquinanti);
-                        d3.select('#LastName').text(d.properties.id_arpa);
+                        d3.select('#IDARPA').text(d.properties.id_amat);
                         d3.select('#Company').text(d.properties.Company);
                         d3.select('#job').text(d.properties.Job);
                         d3.select('#bnsstrt').text(d.properties.BusinessStreet);
@@ -239,8 +265,8 @@ drawstazioni(stazioni)
             
 
             function update() {
-            stazioni.attr("cx", function(d) { return project(d.geometry.coordinates).x })
-                   .attr("cy", function(d) { return project(d.geometry.coordinates).y });
+            stazioni.attr("x", function(d) { return project(d.geometry.coordinates).x })
+                   .attr("y", function(d) { return project(d.geometry.coordinates).y });
         }
 
 
@@ -276,3 +302,4 @@ drawstazioni(stazioni)
 
         // Update d3 shapes' positions to the map's current state
         
+
