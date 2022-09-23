@@ -23,7 +23,7 @@ var paolo = '#627BC1'
         map.on('load', () => {
 map.addSource('states', {
 'type': 'geojson',
-'data': '../assets/data/geojson/municipiMilano.geojson'
+'data': '../assets/data/geojson/municipiMilano2.geojson'
 });
  
 // The feature-state dependent fill-opacity expression will render the hover effect
@@ -62,6 +62,10 @@ map.on('click', 'state-fills', (e) => {
   var res = $('#municipio').text();
   var prefisso ='../assets/img/graphs/Milano_inquinanti_2021/';
   $('#municipio-graph').attr('src', prefisso + res + ".png")
+  d3.select('#InquinantiAssorbiti').text(e.features[0].properties.InquinantiAssorbiti);
+  d3.select('#RisparmioIdrico').text(e.features[0].properties.RisparmioIdrico);
+
+
   });
  
 // When the user moves their mouse over the state-fill layer, we'll update the

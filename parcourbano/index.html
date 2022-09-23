@@ -185,13 +185,10 @@
               <a class="gos-link px-lg-5 text-center" href="/giardinopersonale/"> giardino personale
               </a>
               
-              <a class="gos-link px-lg-5 text-center" href="/home/"> Il progetto
-              </a>
-              
               <a class="gos-link px-lg-5 text-center" href="/parcourbano/"> parcourbano
               </a>
               
-              <a class="gos-link px-lg-5 text-center" href="/sentinella/"> La sentinella
+              <a class="gos-link px-lg-5 text-center" href="/home/"> La sentinella
               </a>
               
             </div> -->
@@ -225,21 +222,21 @@
 <div id="gos-info-tab" class="gos-general-infotab gos-tab">
     <div id="tooltip" class="gos-general-infotab-container h-100">
       <div class="container-fluid h-100">
-        <div class="row align-items-center border-bottom border-2 border-dark">
-            <div class="col-12 col-md-5">
+        <div class="row pt-2 align-items-center border-bottom border-2 border-dark">
+            <div class="col-4 col-md-5">
               <h2 class="clx-tooltip-h2">
                 Milano
               </h2>
             </div>
-            <div class="col-7">
-              <h3 class="clx-tooltip-h3">
+            <div class="col-8">
+              <h3 class="ws-tooltip-p ">
                 Superficie Mappata: 1,5 ettari
               </h3>
             </div>
 
         </div>
-        <div class="row p-4 justify-content-between border-bottom border-2 border-dark pb-4">
-          <div class="col-12 col-lg-5">
+        <div class="row p-2 justify-content-between border-bottom border-2 border-dark pb-4">
+          <div class="row">
             <div class="col-12 d-inline-flex justify-content-center">
             <h2 id="" class="clx-tooltip-h2">Municipio</h2>
             <h2 id="municipio" class="ps-4 clx-tooltip-h2 info"></h2>
@@ -249,24 +246,22 @@
 
           </div>
 
-          <div class="col-12 col-lg-6 text-center">
-            <div class="row">
+          <div class="col-12 col-lg-6 text-center d-flex">
+            <div class="col-6 col-md-12">
               <div class="col-12">
                 <h2 class="clx-tooltip-h3">
                   CO2 assorbita
                 </h2>
-                <span class="">
-
+                <span id="InquinantiAssorbiti" class="ws-tooltip-p">
                 </span>
               </div>
             </div>
-            <div class="row">
+            <div class="col-6 col-md-12">
               <div class="col-12">
                 <h2 class="clx-tooltip-h3">
-                  Risparmio idrico mensile
+                  Risparmio idrico
                 </h2>
-                <span>
-                  120 lt/mt3
+                <span id="RisparmioIdrico" class="ws-tooltip-p">
                 </span>
               </div>
 
@@ -276,14 +271,14 @@
 
         </div>
         <div class="row p-4">
-          <div class="col-12 d-flex justify-content-center pb-3">
+          <div class="col-12 d-flex justify-content-center pb-2">
             <h2 class="clx-tooltip-h2" id="NomeStazione">
               
             </h2>
           </div>
           <div class="col-12 col-md-6">
             <h3 class="clx-tooltip-h3"> Inquinanti </h3>
-            <span id="Inquinanti"></span>
+            <span id="Inquinanti" class="ws-tooltip-p"></span>
 
             <h3 class="clx-tooltip-h3"> Concentrazione inquinanti </h3>
             <span id="ValoriInquinanti"></span>
@@ -402,6 +397,45 @@
     -->
   </body>
   
+
+  <footer class="gos-footer">
+
+  <div class="gos-footer-container d-flex h-100">
+    
+      <div class="col-12 gos-footer-inner">
+
+        <svg xmlns="http://www.w3.org/2000/svg"  id="cos-hamburger" fill="currentColor" class="bi bi-chevron-compact-up" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
+        </svg>
+
+        
+        <div class="gos-footer-header col-12 text-center">
+          <h2 class="d-inline"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+            cura O.S.
+          </h2>
+        </div>
+            <!-- 
+            <div class="footer-items d-flex h-100 flex-column flex-lg-row justify-content-center py-3 px-3">
+              
+              <a class="gos-link px-lg-5 text-center" href="/getStarted/"> cura O.S.
+              </a>
+              
+              <a class="gos-link px-lg-5 text-center" href="/giardinopersonale/"> giardino personale
+              </a>
+              
+              <a class="gos-link px-lg-5 text-center" href="/parcourbano/"> parcourbano
+              </a>
+              
+              <a class="gos-link px-lg-5 text-center" href="/home/"> La sentinella
+              </a>
+              
+            </div> -->
+      </div>
+
+  </div>
+</footer>
+
+
 
 
 </html>
