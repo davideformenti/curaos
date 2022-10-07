@@ -66,7 +66,9 @@ font-family: 'Work Sans', sans-serif; */
 
 @media (min-width: 1400px) { .clx-h4 { font-size: 40px; } }
 
-.clx-p { font-size: 25px; font-family: Work Sans; font-weight: 300; line-height: .98; }
+.ws-p { font-family: Work Sans; font-weight: 300; line-height: .99; font-size: 15px; }
+
+@media (min-width: 1400px) { .ws-p { font-size: 23px; } }
 
 .clx-link { text-decoration: none; font-size: 20px; font-family: Chillax-variable; font-weight: 500; line-height: .95; max-width: fit-content; }
 
@@ -82,17 +84,17 @@ font-family: 'Work Sans', sans-serif; */
 
 @media (min-width: 1400px) { .clx-tooltip-h2 { font-size: 35px; } }
 
-.ws-tooltip-p { font-family: Work Sans; font-weight: 300; font-size: 15px; }
-
-@media (min-width: 1400px) { .ws-tooltip-p { font-size: 20px; } }
-
-@media (min-width: 1400px) { .clx-tooltip-value { font-size: 30px; } }
-
 .clx-tooltip-h3 { font-family: Chillax-variable; font-weight: 500; font-size: 15px; }
 
 @media (min-width: 1080px) { .clx-tooltip-h3 { font-size: 25px; } }
 
 @media (min-width: 1400px) { .clx-tooltip-h3 { font-size: 30px; } }
+
+.ws-tooltip-p { font-family: Work Sans; font-weight: 300; font-size: 15px; }
+
+@media (min-width: 1400px) { .ws-tooltip-p { font-size: 20px; } }
+
+@media (min-width: 1400px) { .clx-tooltip-value { font-size: 30px; } }
 
 /* $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px ) !default; */
 #cos-hamburger { position: inherit; width: 100%; height: 20%; color: #E6F47B; }
@@ -165,17 +167,19 @@ font-family: 'Work Sans', sans-serif; */
 
 @media (min-width: 1080px) { .cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body { height: 73vh; } }
 
-.cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body h4 { font-family: Chillax-variable; font-size: 20px; font-weight: 400; }
+.cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body .municipio { font-family: Oswald; font-size: 30px; font-weight: 300; text-decoration: none; color: black; }
 
-@media (min-width: 1080px) { .cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body h4 { font-size: 40px; } }
+.cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body .body-inner h4 { font-family: Chillax-variable; font-size: 20px; font-weight: 400; }
+
+@media (min-width: 1080px) { .cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body .body-inner h4 { font-size: 40px; } }
 
 .cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body .body-inner h2 { font-family: Chillax-variable; font-size: 25px; font-weight: 400; }
 
 .cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body .body-inner h3 { font-family: Chillax-variable; font-size: 20px; font-weight: 400; }
 
-.cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body .body-inner span { font-family: Oswald; font-size: 30px; font-weight: 300; }
-
 ::-webkit-scrollbar { display: none; }
+
+.sel { border: 2px solid black; border-radius: 30px; }
 
 /* $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px ) !default; */
 /* $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px ) !default; */

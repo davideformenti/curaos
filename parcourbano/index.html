@@ -37,86 +37,93 @@
       <div class="cos-sidebar-accordion-item">
         <div class="accordion-header cos-sidebar-accordion-header" id="flush-headingOne">
           <h2 class="collapsed mb-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-          I DATI
+        DATI PUBBLICI
           </h2>
         </div>
         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
           <div id="dati" class="accordion-body cos-sidebar-accordion-body">
-            <h4>Concentrazione di CO2 - PPM</h4>
+            <div class="col-12">
+              <h3 class="text-center">
+                Municipio
+              </h3>
+              <div id="municipi" class="d-flex justify-content-center">
+                <a class="municipio p-2">1</a>
+                <a class="municipio p-2">2</a>
+                <a class="municipio p-2">3</a>
+                <a class="municipio p-2">4</a>
+                <a class="municipio p-2">5</a>
+                <a class="municipio p-2">6</a>
+                <a class="municipio p-2">7</a>
+                <a class="municipio p-2">8</a>
+                <a class="municipio p-2">9</a>
+              </div>
+            </div>
+           
+           
             <div class="body-inner">
-                <div class="row py-4">
-                  <div class="col-12 col-lg-5">
-                    <img src="/curaos/assets/img/graphs/ppm_gradient_atmosphere.svg" alt="Monkey face" style="width: 100%; height: auto;">
+              <h4 class="pb-3">Concentrazione inquinanti e voc </h4>
+                <div class="row justify-content-between py-2">
+                  <div id="" class="col-7 col-md-3">
+                    <img id="municipio-graph" src="" style="width: 100%; height: auto;">
+
+                    <script>
+                      var descrizioni = [
+                      "ciao1",
+                      "nessuna sentinella installata",
+                      "Nel municipio 3 presenti 3 stazioni di rilievo, due non funzionanti. Dall'unica cella operativa si rilevano dati di diversi VOC e inquinanti. ",
+                      "nessuna sentinella installata",
+                      "nessun dato disponibile dalle sentinelle",
+                      "Per il municipio 6 sono disponibili informazioni solo riguargo al biossido di azoto, rilevate dall'unica stazione nel distretto, quantità sopra i livelli di media consentita per circa il 50% dell'anno solare",
+                      "nessun dato disponibile dalle sentinelle",
+                      "Il municipio 9 presenta una sola sentinella con sensori attivi per il rilevamento di tutte le forme di inquinanti. ",
+                    ]
+
+                      $(".municipio").bind('click', function(e) {
+                      var link = e.target.closest('a');
+                      if(!link)return;
+                      e.preventDefault();
+                      var text = link.textContent;
+                      console.log(text);
+                      //$(this.link).toggleClass("sel")
+                      var prefisso ='../assets/img/graphs/Milano_inquinanti_2021/';
+                      $('#municipio-graph').attr('src', prefisso + text + ".png");
+                      $("#municipio-description").html(descrizioni[text-1]);
+
+                    });
+                    
+                    
+                    $("#municipi").bind("click",function(e){
+                    $("#municipi").find(".municipio").removeClass("sel");
+                    $(e.target).addClass("sel");
+
+                    })
+
+
+
+                      </script>
+
                   </div>
 
-                  <div class="col-12 col-lg-7 d-flex flex-wrap align-self-start">
-                    <div class="col-12 col-lg-4 px-1">
-                      <h3>CO2 atmosferica </h3>
-                        <span class="">421 PPM </span>
-                    </div>
-                    <div class="col-12 col-lg-8 px-1">
-                      <img class="img-fluid" src="/curaos/assets/img/graphs/legenda_orizzontale.png">
-                    </div>
-                    <div class="col-12 py-3">
-                      <h3>Lettura della visualizzazione:</h3>
-                      <p>L'area campita dalle forme astratte in movimento rappresenta la concentrazione (espressa in Parti Per Milione) nell'ambiente circostante alla tua sentinella.
-                        Nei luoghi chiusi e non ventilati spesso si raggiungono valori soglia intorno ai 1000-1100 PPM. La
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <h4>Umidità, quantitiativi pluviometrici e idrici</h4>
-                <div class="row py-4">
-                  <div class="col-12 col-lg-5">
-                    <img src="/curaos/assets/img/graphs/ppm_gradient_atmosphere.svg" alt="Monkey face" style="width: 100%; height: auto;">
+                  <div class="col-5 col-md-2">
+                    <img src="/curaos/assets/img/graphs/Milano_inquinanti_2021/legenda_verticale.png" style="width: 100%; height: auto;">                  
                   </div>
 
-                  <div class="col-12 col-lg-7 d-flex flex-wrap align-self-start">
-                    <div class="col-12 col-lg-4 px-1">
-                      <h3>CO2 atmosferica </h3>
-                        <span class="">421 PPM </span>
-                    </div>
-                    <div class="col-12 col-lg-8 px-1">
-                      <img class="img-fluid" src="/curaos/assets/img/graphs/legenda_orizzontale.png">
-                    </div>
-                    <div class="col-12 py-3">
-                      <h3>Lettura della visualizzazione:</h3>
-                      <p>L'area campita dalle forme astratte in movimento rappresenta la concentrazione (espressa in Parti Per Milione) nell'ambiente circostante alla tua sentinella.
-                        Nei luoghi chiusi e non ventilati spesso si raggiungono valori soglia intorno ai 1000-1100 PPM. La
-                      </p>
-                    </div>
+                  <div class="col-12 col-md-6">
+                    <h4>
+                      Dati sul municipio
+                    </h4>
+                    <p id="municipio-description">
+                      
+                    </p>
                   </div>
-                </div>
+                </div> 
 
-              
-                <h4>Altri inquinanti - O3, NO2, VOC</h4>
-                <div class="row py-4">
-                  <div class="col-12 col-lg-5">
-                    <img src="/curaos/assets/img/graphs/ppm_gradient_atmosphere.svg" alt="Monkey face" style="width: 100%; height: auto;">
+                  <div class="row">
+
+
                   </div>
-
-                  <div class="col-12 col-lg-7 d-flex flex-wrap align-self-start">
-                    <div class="col-12 col-lg-4 px-1">
-                      <h3>CO2 atmosferica </h3>
-                        <span class="">421 PPM </span>
-                    </div>
-                    <div class="col-12 col-lg-8 px-1">
-                      <img class="img-fluid" src="/curaos/assets/img/graphs/legenda_orizzontale.png">
-                    </div>
-                    <div class="col-12 py-3">
-                      <h3>Lettura della visualizzazione:</h3>
-                      <p>L'area campita dalle forme astratte in movimento rappresenta la concentrazione (espressa in Parti Per Milione) nell'ambiente circostante alla tua sentinella.
-                        Nei luoghi chiusi e non ventilati spesso si raggiungono valori soglia intorno ai 1000-1100 PPM. La
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-               
-          </div>
-            
-
+                
+            </div>
           </div>
         </div>
       </div>  
@@ -129,14 +136,67 @@
         <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
           <div id="dati" class="accordion-body cos-sidebar-accordion-body">
 
-            <div class="container-dati d-flex">
-                <div class="col-12">
-                  <h2> 
-                    Salotto
-                  </h2>
+            <div class="container-dati">
+              
+              <div class="row justify-content-center">
+                  <div class="col-10 col-md-4">
+                    <img class="img-fluid" src="/curaos/assets/img/icons/sentinella_Iso.png" alt="">
+                  </div>
+                <div class="sentinella-personale-inner">
+                      <div class="sentinella-heading text-center py-2">
+                        <h3 class="clx-h2 pt-2">
+                          Terrazza
+                        </h3>
+                        <p class="ws-p">Spazio esterno</p>
+                    </div>
+                    <div class="sentinella-sensors">
 
+                      <div class="sensore">
+                        <h3 class="text-center clx-h4">
+                          Sensore Qualità dell'aria
+                        </h3>
+                        <ul>
+                          <li>
+                            modello
+                          </li>
+                          <li>
+                            inizio operatività
+                          </li>
+                          <li>
+                            Stato
+                          </li>
+                          <li>
+                            Ultima manutenzione
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="sensore">
+                        <h3 class="text-center clx-h4">
+                          Sensore Umidità terreno
+                        </h3>
+                        <ul>
+                          <li>
+                            modello
+                          </li>
+                          <li>
+                            inizio operatività
+                          </li>
+                          <li>
+                            Stato
+                          </li>
+                          <li>
+                            Ultima manutenzione
+                          </li>
+                        </ul>
+                      </div>
+
+                    </div>
+                  
                 </div>
-          </div>
+
+              </div>
+
+            </div>
             
           </div>
         </div>
@@ -162,7 +222,7 @@
 
     <footer class="gos-footer">
 
-  <div class="gos-footer-container d-flex h-100">
+  <div class="gos-footer-container d-flex h-100"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
     
       <div class="col-12 gos-footer-inner">
 
@@ -270,23 +330,23 @@
 
 
         </div>
-        <div class="row p-4">
-          <div class="col-12 d-flex justify-content-center pb-2">
+        <div class="row px-3">
+          <div class="col-12 pt-2 d-flex justify-content-center">
             <h2 class="clx-tooltip-h2" id="NomeStazione">
               
             </h2>
           </div>
           <div class="col-12 col-md-6">
-            <h3 class="clx-tooltip-h3"> Inquinanti </h3>
+            <span class="clx-tooltip-h3"> Inquinanti </span>
             <span id="Inquinanti" class="ws-tooltip-p"></span>
 
-            <h3 class="clx-tooltip-h3"> Concentrazione inquinanti </h3>
-            <span id="ValoriInquinanti"></span>
+            <span class="clx-tooltip-h3 d-block"> Concentrazione inquinanti </span>
+            <p id="ValoriInquinanti" class="ws-tooltip-p"></p>
           </div>
           <div class="col-12 col-md-6">
-            <h3 class="clx-tooltip-h3"> Stato sentinella </h3>
+            <span class="clx-tooltip-h3"> Stato sentinella </span>
             <p class="ws-tooltip-p" id="StatoSentinella"></p>
-            <h3 class="clx-tooltip-h3"> Analisi qualitativa </h3>
+            <span class="clx-tooltip-h3"> Analisi qualitativa </span>
             <p class="ws-tooltip-p" id="SinossiQualitativa"></p>
           </div>
         </div>
@@ -400,7 +460,7 @@
 
   <footer class="gos-footer">
 
-  <div class="gos-footer-container d-flex h-100">
+  <div class="gos-footer-container d-flex h-100"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
     
       <div class="col-12 gos-footer-inner">
 
