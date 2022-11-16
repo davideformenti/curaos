@@ -56,15 +56,21 @@ font-family: 'Work Sans', sans-serif; */
 
 .clx-h2 { font-size: 30px; font-family: Chillax-variable; font-weight: 500; line-height: .9; }
 
-@media (min-width: 1080px) { .clx-h2 { font-size: 50px; } }
+@media (min-width: 1080px) { .clx-h2 { font-size: 40px; } }
 
-@media (min-width: 1400px) { .clx-h2 { font-size: 70px; } }
+@media (min-width: 1400px) { .clx-h2 { font-size: 50px; } }
+
+.clx-h3 { font-size: 25px; font-family: Chillax-variable; font-weight: 500; line-height: .9; }
+
+@media (min-width: 1080px) { .clx-h3 { font-size: 30px; } }
+
+@media (min-width: 1400px) { .clx-h3 { font-size: 40px; } }
 
 .clx-h4 { font-size: 20px; font-family: Chillax-variable; font-weight: 500; line-height: .9; }
 
-@media (min-width: 1080px) { .clx-h4 { font-size: 30px; } }
+@media (min-width: 1080px) { .clx-h4 { font-size: 23px; } }
 
-@media (min-width: 1400px) { .clx-h4 { font-size: 40px; } }
+@media (min-width: 1400px) { .clx-h4 { font-size: 30px; } }
 
 .ws-p { font-family: Work Sans; font-weight: 300; line-height: .99; font-size: 15px; }
 
@@ -176,6 +182,8 @@ font-family: 'Work Sans', sans-serif; */
 .cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body .body-inner h2 { font-family: Chillax-variable; font-size: 25px; font-weight: 400; }
 
 .cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body .body-inner h3 { font-family: Chillax-variable; font-size: 20px; font-weight: 400; }
+
+.cos-sidebar .cos-sidebar-body .cos-sidebar-accordion-container .cos-sidebar-accordion-item .cos-sidebar-accordion-body .container-dati .sentinella-personale-inner .sentinella-sensors .sensore ul { list-style-type: none; font-family: Work Sans; padding: 0; }
 
 ::-webkit-scrollbar { display: none; }
 

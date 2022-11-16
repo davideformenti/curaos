@@ -80,7 +80,7 @@ map.setFeatureState(
 { hover: false }
 );
 }
-hoveredStateId = e.features[0].id;
+hoveredStateId = e.features[0].MUNICIPIO;
 map.setFeatureState(
 { source: 'states', id: hoveredStateId },
 { hover: true }
@@ -191,6 +191,7 @@ drawstazioni(stazioni)
                 })
                     
                     .attr("width", 40)
+                    .attr("stroke", 10)
                     .attr("height", 40)
                     .attr("class","sensore")
                     .attr("style","cursor:pointer")
@@ -220,6 +221,9 @@ drawstazioni(stazioni)
 
         }
         
+
+
+        
         function drawstazioni(data) {
            
 
@@ -227,9 +231,11 @@ drawstazioni(stazioni)
             stazioni =p.selectAll("circle")
                 .data(data.features)
                 .enter()
-                .append("image")
-                .attr("xlink:href", "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNzUycHQiIGhlaWdodD0iNzUycHQiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDc1MiA3NTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8Zz4KICA8cGF0aCBkPSJtNzUyIDM3NmMwIDEzNC4zMy03MS42NjQgMjU4LjQ2LTE4OCAzMjUuNjItMTE2LjM0IDY3LjE2OC0yNTkuNjYgNjcuMTY4LTM3NiAwLTExNi4zNC02Ny4xNjQtMTg4LTE5MS4yOS0xODgtMzI1LjYyczcxLjY2NC0yNTguNDYgMTg4LTMyNS42MmMxMTYuMzQtNjcuMTY4IDI1OS42Ni02Ny4xNjggMzc2IDAgMTE2LjM0IDY3LjE2NCAxODggMTkxLjI5IDE4OCAzMjUuNjIiIGZpbGw9IiNmZmYiLz4KICA8cGF0aCBkPSJtMzc2IDE1MS4wNWMtMTI0LjA4IDAtMjI0Ljk1IDEwMC44Ny0yMjQuOTUgMjI0Ljk1czEwMC44NyAyMjQuOTUgMjI0Ljk1IDIyNC45NWMxMjQuMDggMC4wMDM5MDYgMjI0Ljk1LTEwMC44NyAyMjQuOTUtMjI0Ljk1cy0xMDAuODgtMjI0Ljk1LTIyNC45NS0yMjQuOTV6bTEwOC45MyAyMDQuNTktNDEuMjAzIDM3Ljg4N2MtMi4zNjcyIDIuMzY3Mi0zLjMxNjQgNS42ODM2LTIuODM5OCA4Ljk5NjFsMTEuMzYzIDUzLjk5MmMyLjgzOTggMTMuMjYyLTExLjM2NyAyMy4yMDctMjMuMjA3IDE2LjU3NGwtNDguMzAxLTI3LjQ2OWMtMi44Mzk4LTEuNDIxOS02LjYyODktMS40MjE5LTkuNDcyNyAwbC00OC4zMDUgMjcuNDY5Yy0xMS44NCA2LjYyODktMjUuNTc0LTMuNzg5MS0yMy4yMDctMTYuNTc0bDExLjM2Ny01NC40NjFjMC40NzI2Ni0zLjMxNjQtMC40NzI2Ni02LjYyODktMi44Mzk4LTguOTk2MWwtNDEuMjAzLTM3Ljg4N2MtOS45NDUzLTguOTk2MS00LjczNDQtMjUuNTc0IDguOTk2MS0yNi45OTJsNTUuNDEtNi4xNTYyYzMuMzE2NC0wLjQ3MjY2IDYuMTU2Mi0yLjM2NzIgNy41NzgxLTUuNjgzNmwyMi43My01MC42OGM1LjY4MzYtMTIuMzEyIDIyLjczLTEyLjMxMiAyOC40MTQgMGwyMy4yMDcgNTAuNjcyYzEuNDIxOSAyLjgzOTggNC4yNjE3IDUuMjEwOSA3LjU3ODEgNS42ODM2bDU1LjQxIDYuMTU2MmMxMy4yNTggMS40MjE5IDE4LjQ2OSAxNy45OTYgOC41MjM0IDI3LjQ2OXoiIGZpbGw9IiMzYjZhZjkiLz4KIDwvZz4KPC9zdmc+Cg==")
-                    
+                .append("svg:image")
+                
+                .attr("xlink:href", function (d){
+                  return d.properties.icon_path
+                })
                 .attr("width", 30)
                 .attr("height", 30)
                 .attr("class","sensore_arpa_milano")
@@ -237,9 +243,9 @@ drawstazioni(stazioni)
 /*                     .attr("r", 10).attr("fill","red")*/       
                       .on("click", function(d) {
                         d3.select(this).style('fill', 'white'); 
-                        d3.select('#location').text(d.properties.nome);
-                        d3.select('#pollutants').text(d.properties.inquinanti);
-                        d3.select('#IDARPA').text(d.properties.id_amat);
+                        d3.select('#NomeStazione').text(d.properties.nome);
+                        d3.select('#Inquinanti').text(d.properties.inquinanti);
+                        d3.select('#StatoSentinella').text(d.properties.stato);
                         d3.select('#Company').text(d.properties.Company);
                         d3.select('#job').text(d.properties.Job);
                         d3.select('#bnsstrt').text(d.properties.BusinessStreet);
