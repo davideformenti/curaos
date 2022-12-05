@@ -34,9 +34,9 @@
 
 
 
-      <div class="cos-sidebar-accordion-item">
+      <div class="text-white cos-sidebar-accordion-item">
         <div class="accordion-header cos-sidebar-accordion-header" id="flush-headingOne">
-          <h2 class="collapsed mb-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          <h2 class="text-white collapsed mb-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
           I DATI
           </h2>
         </div>
@@ -71,7 +71,7 @@
           </div>
         </div>
       </div>  
-      <div class="cos-sidebar-accordion-item">
+      <div class="cos-sidebar-accordion-item text-white">
         <div class="accordion-header cos-sidebar-accordion-header" id="flush-headingThree">
           <h2 class="collapsed mb-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
           La mia sentinella
@@ -80,7 +80,7 @@
         <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
           <div id="dati" class="accordion-body cos-sidebar-accordion-body">
 
-            <div class="container-dati">
+            <div class="container-dati container">
               
               <div class="row justify-content-center">
                   <div class="col-10 col-md-4">
@@ -91,48 +91,71 @@
                         <h3 class="clx-h2 pt-2">
                           Terrazza
                         </h3>
-                        <p class="ws-p">Spazio esterno</p>
+                        
+                          
+                        
+                        <p class="ws-p">
+                          Spazio esterno
+                          <br><br><b> Inizio operatività</b><br>10 Luglio 2022
+                        </p>
                     </div>
-                    <div class="sentinella-sensors">
+                    <div class="sentinella-sensors d-flex flex-wrap">
 
-                      <div class="sensore">
-                        <h3 class="text-center clx-h4">
+                      <div class="sensore col-12 col-md-4 d-flex flex-column">
+                        <h3 class="clx-h4">
                           Sensore Qualità dell'aria
                         </h3>
                         <ul>
                           <li>
-                            modello
+                           <b> Modello </b><br>MQ135
+                          </li>
+                  
+                          <li>
+                            <b> Stato</b><br> In funzione 
                           </li>
                           <li>
-                            inizio operatività
-                          </li>
-                          <li>
-                            Stato
-                          </li>
-                          <li>
-                            Ultima manutenzione
+                            <b> Ultima manutenzione</b> <br>Mai
                           </li>
                         </ul>
                       </div>
-                      <div class="sensore">
-                        <h3 class="text-center clx-h4">
-                          Sensore Umidità terreno
+
+                      <div class="sensore col-12 col-md-4 d-flex flex-column">
+                        <h3 class="clx-h4">
+                          Sensore idrico
                         </h3>
                         <ul>
                           <li>
-                            modello
+                           <b> Modello </b><br>MQ135
+                          </li>
+                  
+                          <li>
+                            <b> Stato</b><br> In funzione 
                           </li>
                           <li>
-                            inizio operatività
-                          </li>
-                          <li>
-                            Stato
-                          </li>
-                          <li>
-                            Ultima manutenzione
+                            <b> Ultima manutenzione</b> <br>Mai
                           </li>
                         </ul>
                       </div>
+
+                      <div class="sensore col-12 col-md-4 d-flex flex-column">
+                        <h3 class="clx-h4">
+                          Stazione meteorologica
+                        </h3>
+                        <ul>
+                          <li>
+                           <b> Modello </b><br>MQ135
+                          </li>
+                  
+                          <li>
+                            <b> Stato</b><br> In funzione 
+                          </li>
+                          <li>
+                            <b> Ultima manutenzione</b> <br>Mai
+                          </li>
+                        </ul>
+                      </div>
+                      
+
 
                     </div>
                   
@@ -169,19 +192,20 @@
   <div class="gos-footer-container d-flex h-100"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
     
       <div class="col-12 gos-footer-inner">
-
-        <svg xmlns="http://www.w3.org/2000/svg"  id="cos-hamburger" fill="currentColor" class="bi bi-chevron-compact-up" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
-        </svg>
-
         
-        <div class="gos-footer-header col-12 text-center">
-          <h2 class="d-inline"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
-            cura O.S.
-          </h2>
+        <div class="gos-footer-header col-12 h-100 align-items-center justify-content-center d-flex text-center">
+          <div class="col-1">
+          <img class="img-fluid" src="/curaos/assets/img/identity/logofloraeos_bianco.png" alt="">
+          <!-- <h2 class="d-inline"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+            Florae Open Source
+          </h2> -->
+        </div>
         </div>
             <!-- 
             <div class="footer-items d-flex h-100 flex-column flex-lg-row justify-content-center py-3 px-3">
+              
+              <a class="gos-link px-lg-5 text-center" href="/about/"> About
+              </a>
               
               <a class="gos-link px-lg-5 text-center" href="/getStarted/"> cura O.S.
               </a>
@@ -380,19 +404,20 @@
   <div class="gos-footer-container d-flex h-100"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
     
       <div class="col-12 gos-footer-inner">
-
-        <svg xmlns="http://www.w3.org/2000/svg"  id="cos-hamburger" fill="currentColor" class="bi bi-chevron-compact-up" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
-        </svg>
-
         
-        <div class="gos-footer-header col-12 text-center">
-          <h2 class="d-inline"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
-            cura O.S.
-          </h2>
+        <div class="gos-footer-header col-12 h-100 align-items-center justify-content-center d-flex text-center">
+          <div class="col-1">
+          <img class="img-fluid" src="/curaos/assets/img/identity/logofloraeos_bianco.png" alt="">
+          <!-- <h2 class="d-inline"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+            Florae Open Source
+          </h2> -->
+        </div>
         </div>
             <!-- 
             <div class="footer-items d-flex h-100 flex-column flex-lg-row justify-content-center py-3 px-3">
+              
+              <a class="gos-link px-lg-5 text-center" href="/about/"> About
+              </a>
               
               <a class="gos-link px-lg-5 text-center" href="/getStarted/"> cura O.S.
               </a>

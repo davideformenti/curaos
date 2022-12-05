@@ -3,198 +3,179 @@
   
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="/curaos/assets/css/main.css" />
     <link href='https://cdn.jsdelivr.net/npm/mapbox-gl/dist/mapbox-gl.css' rel='stylesheet' />
-<script src='https://cdn.jsdelivr.net/npm/mapbox-gl/dist/mapbox-gl.min.js'></script>
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="../assets/JS/queue.v1.min.js"></script>
-<script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>
+      <script src='https://cdn.jsdelivr.net/npm/mapbox-gl/dist/mapbox-gl.min.js'></script>
+      <script src="https://d3js.org/d3.v4.min.js"></script>
+      <script src="../assets/JS/queue.v1.min.js"></script>
+      <script src="../assets/JS/jquery-3.6.0.min.js"></script>
+      <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>
 
 
   </head>
-
-
-<header class="offcanvas-siderbar px-3 d-flex flex-column justify-content-center position-fixed top-0 left-0 w-100 gos-header top-of-page" style="z-index: 10;">
-    <div class="gos-header-logo-container gos-sidebar align-items-center d-lg-block">
-      <div class="row m-0 align-items-center w-100 h-100 justify-content-between">
-        
-        <div class="col-8 px-0">
-          <div class="gos-link gos-sidebar-link-logo">
-            <h1 class="m-0">CURA D.O.S.</h1>
-            <!-- <img class="w-25" src="/assets/img/logo.png"> -->
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-2 align-self-center px-0">
-          <div class="gos-button text-end gos-sidebar-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">    
-
-            <div class="icon-container" onclick="myFunction(this)">
-              <div class="bar1"></div>
-              <div class="bar2"></div>
-              <div class="bar3"></div>
-            </div>
-            
-         <!--    <script>
-            function myFunction(x) {
-              x.classList.toggle("change");
-            }
-            </script>
- -->
-
-
-       
-          </div>
-        </div>
-
-
-    <div class="gos-sidebar offcanvas offcanvas-end px-5" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel offcanvasRight">
-      <div class="offcanvas-container justify-content-around align-items-center flex-column h-100 d-flex flex-lg-row-reverse">
-        <div class="offcanvas-container-menu col-6">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title px-5" id="offcanvasWithBothOptionsLabel">
-            CURA OS
-            </h5>
-          <div class="offcanvas-user-area">
-           <a href="/login">SIGN IN</a> 
-          </div>
-   
-          
-          <div type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></div>
-          </div>
-        
-        
-          <div class="menu-items d-flex h-75 flex-column align-items-start justify-content-center px-3">
-            
-            <a class="gos-link px-lg-5" href="/about/"> Il progetto
-            </a>
-            
-            <a class="gos-link px-lg-5" href="/giardinopersonale/"> giardino personale
-            </a>
-            
-            <a class="gos-link px-lg-5" href="/sentinella/"> La sentinella
-            </a>
-            
-            <a class="gos-link px-lg-5" href="/parcourbano/"> parcourbano
-            </a>
-            
-          </div>
-
-        </div>
-
-
-
-
-        
-        <div class="offcanvas-container-info col-6 d-flex flex-column">
-          <div class="info-1 col-12 h-50">
-            CIAO
-          </div>
-          <div class="info-2 col-12 h-50">
-            CIAO
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-  </header>
 
   <body>
 
       
     
-<section id="" class="gos-section-two-columns gos-section px-3"  style="background-image: url('/assets/img/collage-mac.png')">
-    <div class="d-flex flex-column flex-lg-row justify-content-end justify-content-lg-between align-items-center gos-two-column-container h-100">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container-fluid py-0 px-4 px-lg-5">
+       <a id="navbarBrand" class="navbar-brand clx-brand d-none d-lg-block" href="/curaos/home"><b>Florae Open Source</b></a>
+       <div class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 
-      <div class="col-12 h-50 h-lg-100 two-columns-header d-flex align-items-center justify-content-center">
-        <div class="two-columns-header-inner col-6">
-              <h3 class="text-center py-3">
-                IL PROGETTO
-              </h3>
-            <p>
-             CURA O.S. (Collaborazione URbana Aree Open Source)
-            </p>      
+       </div>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                
+                <li class="nav-item"><a class="nav-link" href="/curaos/parcourbano">Mappa</a></li>
+                <li class="nav-item"><a class="nav-link" href="/curaos/getStarted">Per Iniziare</a></li>
+                <li class="nav-item"><a class="nav-link" href="/curaos/giardinopersonale">Accedi</a></li>
+                <li class="nav-item"><a class="nav-link" href="/curaos/about">About</a></li>
+
+            </ul>
         </div>
-      </div>
-      <!-- <div class="col-12 col-lg-4 h-25 h-lg-100 two-columns-header-description d-flex align-items-center">
-      </div> -->
     </div>
-  </section>
+</nav>
 
 
 
-<section>
-
-  <div class="gos-section gos-section-a accordion accordion-flush" id="accordionFlushExample">
-  
-<!--   accordion 1 -->
-  
-    <div class="gos-section-accordion-container accordion-item">
-      <div class="gos-accordion-header px-3 py-5" id="flush-headingOne">
-        <h2 class="collapsed text-center py-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-            ABSTRACT
-        </h2>
-      </div>
-      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body col-12 col-md-8 col-lg-6">
-          <p class="py-5">
-            Il costante mutamento della sfera pubblica, dei suoi servizi, del ruolo del cittadino e dei suoi rapporti con la comunicazione urbana ha portato a un cambiamento radicale dei contatti tra il mondo privato e quello pubblico. Questo insieme di trasformazioni, determinate in parte dall’introduzione di nuove tecnologie nei mezzi di comunicazione potrebbero essere occasione di un nuovo approccio comunicativo. L’obiettivo della tesi è migliorare il legame tra gli attori dello scenario urbano attraverso la cultura progettuale, la co-creazione, l’ engagement della comunità e l'utilizzo di tecniche visive sperimentali. A tal proposito la domanda di ricerca è la seguente: In che modo la fruizione di artefatti interattivi di visualizzazione dati in tempo reale, inseriti in contesti urbani di pubblica partecipazione, può generare consapevolezza civica riguardo la salute del verde pubblico nel cittadino?
-          </p>
-
+  <!-- Projects-->
+  <section class="gs-steps-section" id="projects">
+    <div class="logo d-flex container justify-content-center">
+        <div class="logo-container col-6 col-md-3 col-lg-2">
+            <a href="/curaos/sentinella">
+            <img class="img-fluid" src="/curaos/assets/img/identity/logofloraeos_bianco.png" alt="">
+            </a>
         </div>
-      </div>
     </div>
-
-<!--   accordion 2 -->
-
-<div class="gos-section-accordion-container accordion-item">
-  <div class="gos-accordion-header px-3 py-5" id="flush-headingTwo">
-    <h2 class="collapsed text-center py-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-        OBIETTIVI DI RICERCA
-    </h2>
-  </div>
-  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-    <div class="accordion-body">
-      <p class="py-5">
-        Il costante mutamento della sfera pubblica, dei suoi servizi, del ruolo del cittadino e dei suoi rapporti con la comunicazione urbana ha portato a un cambiamento radicale dei contatti tra il mondo privato e quello pubblico. Questo insieme di trasformazioni, determinate in parte dall’introduzione di nuove tecnologie nei mezzi di comunicazione potrebbero essere occasione di un nuovo approccio comunicativo. L’obiettivo della tesi è migliorare il legame tra gli attori dello scenario urbano attraverso la cultura progettuale, la co-creazione, l’ engagement della comunità e l'utilizzo di tecniche visive sperimentali. A tal proposito la domanda di ricerca è la seguente: In che modo la fruizione di artefatti interattivi di visualizzazione dati in tempo reale, inseriti in contesti urbani di pubblica partecipazione, può generare consapevolezza civica riguardo la salute del verde pubblico nel cittadino? </p>  
+    <div class="community-section-header mt-5 py-5">
+        
     </div>
-  </div>
-</div>
-
-<!--   accordion 2 -->
-
-<div class="gos-section-accordion-container accordion-item">
-  <div class="gos-accordion-header px-3 py-5" id="flush-headingThree">
-    <h2 class="collapsed text-center py-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-        DOMANDA DI RICERCA
-    </h2>
-  </div>
-  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-    <div class="accordion-body">
-      <p class="py-5">
-        Il costante mutamento della sfera pubblica, dei suoi servizi, del ruolo del cittadino e dei suoi rapporti con la comunicazione urbana ha portato a un cambiamento radicale dei contatti tra il mondo privato e quello pubblico. Questo insieme di trasformazioni, determinate in parte dall’introduzione di nuove tecnologie nei mezzi di comunicazione potrebbero essere occasione di un nuovo approccio comunicativo. L’obiettivo della tesi è migliorare il legame tra gli attori dello scenario urbano attraverso la cultura progettuale, la co-creazione, l’ engagement della comunità e l'utilizzo di tecniche visive sperimentali. A tal proposito la domanda di ricerca è la seguente: In che modo la fruizione di artefatti interattivi di visualizzazione dati in tempo reale, inseriti in contesti urbani di pubblica partecipazione, può generare consapevolezza civica riguardo la salute del verde pubblico nel cittadino? </p>  
+    <div class="container-fluid p-0">
+          <!-- Project Two Row-->
+          <div class="row py-3 gx-0 justify-content-between">
+            <div class="col-lg-4">
+                <img class="img-fluid" src="/curaos/assets/img/identity/pattern4.png" alt="..." />
+            </div>
+            <div class="col-lg-6 order-lg-first">
+                <div class="ps-5 h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text py-2 d-flex flex-column justify-content-evenly w-100">
+                            <h4 class="text-white clx-h2">cos'è Florae Open Source</h4>
+                            <p class="mb-0 pt-5 text-white-50 ws-p">
+                                Florae Open source è una piattaforma aperta per il libero scambio di dati relativi al verde urbano nella città di Milano.
+                                Nato come prototipo di tesi di laurea magistrale in design della comunicazione al Politecnico di Milano, il progetto si inserisce nell'ambito della visualizzazione dati e della loro generazione attraverso pratiche partecipative
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <!-- Project Two Row-->
+          <div class="row py-3 gx-0 justify-content-between">
+            <div class="col-lg-4">
+                <img class="img-fluid" src="/curaos/assets/img/identity/pattern3.png" alt="..." />
+            </div>
+            <div class="col-lg-6 order-lg-last">
+                <div class=" h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text py-2 d-flex flex-column justify-content-center w-100">
+                            <h4 class="text-white clx-h2">Abstract</h4>
+                            <p class="mb-0 pt-5 pe-5 text-white-50 ws-p">
+                                Le sempre crescenti pratiche di open government e l’adesione al modello open source hanno portato ad un regolare confronto
+                                tra l’ambiente pubblico (non solo legato all’amministrazione ma anche
+                                al vivere con gli altri come cittadini) e la creazione di nuove forme
+                                di comunicazione sperimentali a scopi principalmente accademico/
+                                informativi. Questa intersezione si è evoluta verso lo sviluppo sempre
+                                maggiore di iniziative di carattere pubblico, in cui gli interessi verso la
+                                lettura di dati e la tecnologia che li genera sono al centro del progetto
+                                stesso come SmartCitizen o SensorCommunity.
+                                La tesi si pone l’obiettivo di analizzare queste iniziative per
+                                comprendere o trovare (se possibili) pattern progettuali divenuti utili
+                                ai molteplici attori della città (PA, progettisti – urbani, della comunicazione, cittadini stessi, operatori urbani ecc.) e di valutarne ulteriori
+                                opportunità progettuali. Attraverso lo sviluppo di un prototipo di progetto, si cercherà di adottare un approccio pratico ad una di queste
+                                opportunità figlia del retaggio di un ampio spettro di progetti non solo
+                                partecipativi ma anche di studi di comunicazione visiva.
+                                Nello specifico il prototipo proverà a sondare nel campo progettuale del verde (pubblico/privato) e della qualità dell’aria, la possibilità di intersecare gli spazi pubblici e quelli privati.
+                                L’obiettivo finale è quello di dimostrare che ulteriori applicazioni a beneficio della comunità cittadina sarebbero disponibili
+                                abbandonando strade centralizzate istituzionali mono-fonte di database aperti o progetti divulgativi con un discreto potenziale di sensibilizzazione, convergendo verso pratiche di comunicazione che non
+                                compromettano però la privacy del singolo e che introducano logiche
+                                di Open government per ampliare le possibilità amministrative per la
+                                cittadinanza.                             </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Project One Row-->
+        <div class="row py-3 gx-0 mb-5 mb-lg-0 justify-content-center">
+            <div class="col-lg-6 "><img class="img-fluid p-5" src="/curaos/assets/img/getStarted/step2.png" alt="..." /></div>
+            <div class="col-lg-6">
+                <div class="h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text py-2 d-flex flex-column justify-content-center w-100">
+                            <h4 class="text-white clx-h2">Consultazione Dati</h4>
+                            <p class="mb-0 pt-5 text-white-50 ws-p pe-5">
+                                Il presente prototipo è stato sviluppato attraverso l'utilizzo della piattaforma Adafruit, di microcontrollori Arduino e dataset aperti consultabili sul portale open data del comune di Milano.
+                                Per lo sviluppo della piattaforma sono stati utilizzati i framework open source git, jekyll, bootstrap v5, p5.js, d3.j, Mapbox GL, Python ed altri.
+                                Si ringrazia la community open source per lo sviluppo di tool per la co-creazione ed altri strumenti che hanno permesso una maggior accessibilità a tutta la comunità di progettisti grafici.
+                            </p>
+                            <a href="https://dati.comune.milano.it/dataset?groups=envi&tags=qualita+aria" class="clx-link pt-5 text-white">Dati pubblici</a>
+                            <a href="https://io.adafruit.com/davideformenti/public" class="clx-link pt-5 text-white">Dati sentinella personale</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          
     </div>
-  </div>
-</div>
+</section>
+
+
+
+<footer class="footer small text-center text-white-50 py-3">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        
+        <div class="col-4 col-md-3 col-lg-2 py-3">
+            <img src="/curaos/assets/img/identity/logo-poli-black.png" alt="" class="img-fluid">
+        </div>
+        
+        <div class="col-4 col-md-3 col-lg-1 py-4 w-10">
+            <img src="/curaos/assets/img/identity/logofloraenero.png" alt="" class="img-fluid">
+        </div>
+
+        <div class="col-4 col-md-3 col-lg-2 py-3 w-10 ">
+            <ul class="footer-list p-0">
+                <li>
+                    <a class="footer-item" href="">
+                        ordina adesso
+                    </a>
+                </li>
+                <li>
+                    <a class="footer-item" href="">
+                        accedi
+                    </a>
+                </li>
+                <li>
+                    <a class="footer-item" href="">
+                        Per iniziare
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
 
 
 
 
 
 
-
-
-
-
-
-  </div>
-  </section>
-
-
-
+<script src="/curaos/assets/JS/main.js"></script>
 
 
 
@@ -212,46 +193,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
-  </body>
-
-  <footer class="gos-footer">
-
-  <div class="gos-footer-container d-flex h-100">
     
-      <div class="col-12 gos-footer-inner">
-
-        <svg xmlns="http://www.w3.org/2000/svg"  id="cos-hamburger" fill="currentColor" class="bi bi-chevron-compact-up" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"/>
-        </svg>
-
-        
-        <div class="gos-footer-header col-12 text-center">
-          <h2 class="d-inline"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
-            cura O.S.
-          </h2>
-        </div>
-            <!-- 
-            <div class="footer-items d-flex h-100 flex-column flex-lg-row justify-content-center py-3 px-3">
-              
-              <a class="gos-link px-lg-5 text-center" href="/about/"> Il progetto
-              </a>
-              
-              <a class="gos-link px-lg-5 text-center" href="/giardinopersonale/"> giardino personale
-              </a>
-              
-              <a class="gos-link px-lg-5 text-center" href="/sentinella/"> La sentinella
-              </a>
-              
-              <a class="gos-link px-lg-5 text-center" href="/parcourbano/"> parcourbano
-              </a>
-              
-            </div> -->
-      </div>
-
-  </div>
-</footer>
-
-
+  </body>
 
 
 </html>

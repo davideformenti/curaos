@@ -1,7 +1,7 @@
 
 
 
-var paolo = '#627BC1'
+var paolo = '#8DA8A8'
 
         //////////////////
         // Mapbox stuff
@@ -23,7 +23,9 @@ var paolo = '#627BC1'
         map.on('load', () => {
 map.addSource('states', {
 'type': 'geojson',
-'data': '../assets/data/geojson/MunicipiMilano2.geojson'
+'data': '../assets/data/geojson/MunicipiMilano.geojson',
+ //This ensures that all features have unique IDs           
+
 });
  
 // The feature-state dependent fill-opacity expression will render the hover effect
@@ -52,7 +54,7 @@ map.addLayer({
 'source': 'states',
 'layout': {},
 'paint': {
-'line-color': '#ffd056',
+'line-color': '#1C5252',
 'line-width': 2
 }
 });
@@ -80,7 +82,7 @@ map.setFeatureState(
 { hover: false }
 );
 }
-hoveredStateId = e.features[0].MUNICIPIO;
+hoveredStateId = e.features[0].id;
 map.setFeatureState(
 { source: 'states', id: hoveredStateId },
 { hover: true }
